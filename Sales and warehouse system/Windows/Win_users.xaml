@@ -1,0 +1,358 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sales_and_warehouse_system.Windows"
+        xmlns:PersianDateControls="clr-namespace:Arash.PersianDateControls;assembly=PersianDateControls" x:Class="Sales_and_warehouse_system.Windows.Win_users"
+        mc:Ignorable="d"
+        Title="Win_users" Height="533.6" Width="676.8" Background="Transparent" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid Margin="10,-5,29,-0.2" Height="590" VerticalAlignment="Top">
+        <Rectangle HorizontalAlignment="Left" Height="534" Stroke="Black" VerticalAlignment="Top" Width="603" RadiusX="20" RadiusY="20" Margin="25,-2,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF97C6DA" Offset="0"/>
+                    <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="62" Stroke="Black" VerticalAlignment="Top" Width="582" Margin="25,10,0,0" RadiusX="20" RadiusY="20">
+            <Rectangle.Effect>
+                <DropShadowEffect ShadowDepth="15"/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFAF5F5" Offset="0"/>
+                    <GradientStop Color="#FF797979" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="label" Content="فرم نمایش کاربران" HorizontalAlignment="Left" Margin="231,20,0,0" VerticalAlignment="Top" FontFamily="B Ziba" FontSize="24" Height="48" Width="154">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0F00FF" Offset="0"/>
+                    <GradientStop Color="#FF1E1E22" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="60" Margin="532,12,0,0" VerticalAlignment="Top" Width="54" Source="/Sales and warehouse system;component/img/mottakere.png" RenderTransformOrigin="-1.156,0.48">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="73,17,0,0" VerticalAlignment="Top" Width="47" Source="/Sales and warehouse system;component/img/exit.png" MouseDown="image1_MouseDown" RenderTransformOrigin="-0.063,0.762">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <DataGrid x:Name="dataGrid_User" HorizontalAlignment="Left" Margin="35,94,0,0" VerticalAlignment="Top" Height="180" Width="575" FlowDirection="RightToLeft" FontFamily="B Yekan" AutoGenerateColumns="False" RenderTransformOrigin="0.5,0.5" FontSize="18" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.048"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB1E8EC" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="شماره کاربری"  Binding="{Binding UserID}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Red"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="نام "  Binding="{Binding UserName}">
+
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Blue"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="نام خانوادگی "  Binding="{Binding UserFamily}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Blue"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="شماره تماس "  Binding="{Binding UserTell}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Red"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="سن "  Binding="{Binding UserAge}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Blue"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="جنسیت "  Binding="{Binding UserGenderFarsi}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Red"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="وضعیت "  Binding="{Binding UserActiveFarsi}" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Green"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="تازیخ ثبت "  Binding="{Binding UserStartTime}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Blue"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="نام کاربری"  Binding="{Binding UserUserName}">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Green"></Setter>
+                            <Setter Property="FontFamily" Value="B yekan>"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                        </Style>
+
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="124" Margin="38,293,0,0" RadiusY="20" RadiusX="20" Stroke="Black" VerticalAlignment="Top" Width="553">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="72" Margin="76,438,0,0" RadiusY="20" RadiusX="20" Stroke="Black" VerticalAlignment="Top" Width="488"/>
+        <Label x:Name="label1" Content="جستجو" HorizontalAlignment="Left" Margin="527,289,0,0" VerticalAlignment="Top" Foreground="#FF2C742A" FontFamily="B Yekan" FontSize="20"/>
+        <Label x:Name="label1_Copy" Content="از" HorizontalAlignment="Left" Margin="543,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,2.358" Width="38" FontSize="18" FontFamily="B Yekan">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label1_Copy1" Content="تا" HorizontalAlignment="Left" Margin="543,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,2.358" FontSize="18" FontFamily="B Yekan">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label1_Copy2" Content="نام" HorizontalAlignment="Left" Margin="356,326,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,2.358" FontSize="18" FontFamily="B Yekan">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label1_Copy3" Content="نام خانوادگی" HorizontalAlignment="Left" Margin="334,357,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.379,2.358" FontSize="18" FontFamily="B Yekan">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+
+        <PersianDateControls:PersianDatePicker Name="Calender_az"  HorizontalAlignment="Left" Margin="438,332,0,0" VerticalAlignment="Top" DisplayDate="1390/1/1" SelectedDate="1390/1/1" Width="128"/>
+        <TextBox x:Name="txt_name" HorizontalAlignment="Left" Height="23" Margin="211,334,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.012"/>
+                    <GradientStop Color="#FFA1E2E7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txt_family" HorizontalAlignment="Left" Height="23" Margin="211,366,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.012"/>
+                    <GradientStop Color="#FFA1E2E7" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <RadioButton x:Name="rd_active" Content="فعال" HorizontalAlignment="Left" Margin="140,332,0,0" VerticalAlignment="Top" FontFamily="B Yekan" FontSize="14" IsChecked="True">
+            <RadioButton.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.012"/>
+                    <GradientStop Color="#FF446520" Offset="1"/>
+                </LinearGradientBrush>
+            </RadioButton.Background>
+        </RadioButton>
+        <RadioButton x:Name="rd_deactive" Content="غیر فعال" HorizontalAlignment="Left" Margin="137,366,0,0" VerticalAlignment="Top" FontFamily="B Yekan" FontSize="14">
+            <RadioButton.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.012"/>
+                    <GradientStop Color="#FF1D7469" Offset="1"/>
+                </LinearGradientBrush>
+            </RadioButton.Background>
+        </RadioButton>
+        <Image x:Name="imagesearch" HorizontalAlignment="Left" Height="44" Margin="55,337,0,0" VerticalAlignment="Top" Width="68" Source="/Sales and warehouse system;component/img/search.ico" MouseDown="imagesearch_MouseDown" RenderTransformOrigin="0.9,0.3">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="100" Margin="933,813,-233,-113" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btn_newUser" Content="کاربر جدید" HorizontalAlignment="Left" Margin="405,453,0,0" VerticalAlignment="Top" Width="133" RenderTransformOrigin="0.143,-0.328" Height="37" FontFamily="SimSun" FontSize="14" Click="button_Copy1_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF26C9F2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Edit" Content="ویرایش کاربر" HorizontalAlignment="Left" Margin="244,453,0,0" VerticalAlignment="Top" Width="133" RenderTransformOrigin="0.143,-0.328" Height="37" FontFamily="SimSun" FontSize="14" Click="button_Edit_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF26C9F2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_Deactive" Content="فعال/غیرفعال" HorizontalAlignment="Left" Margin="94,453,0,0" VerticalAlignment="Top" Width="133" RenderTransformOrigin="0.143,-0.328" Height="37" FontFamily="SimSun" FontSize="14" Click="Btn_Deactive_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF26C9F2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <PersianDateControls:PersianDatePicker Name="Calnder_ta" HorizontalAlignment="Left" Margin="438,362,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_dastresi" Visibility="Hidden" Content="تعین سطح دسترسی کاربران" HorizontalAlignment="Left" Margin="171,449,0,0" VerticalAlignment="Top" Width="316" RenderTransformOrigin="0.143,-0.328" Height="44" FontFamily="SimSun" FontSize="14" Click="Btn_showaccsesuser">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FF26C9F2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

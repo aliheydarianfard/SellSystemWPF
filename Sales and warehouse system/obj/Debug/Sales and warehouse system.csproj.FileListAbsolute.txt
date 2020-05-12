@@ -1,0 +1,178 @@
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.csprojResolveAssemblyReference.cache
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Theme\BubbleCreme.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Theme\ShinyDarkPurple.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Wiin_Addproduct.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewTrans.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewPrice.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddSystemPart.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddUser.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddCoustomer.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Change_PassWord.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Inventory.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_InvoceShow.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Invoice.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ProductPrice.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Product.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Customer.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Main.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ReportList.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_sellchart.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ShowReport.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_UserLogxaml.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_users.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Win_Login.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\App.g.cs
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system_MarkupCompile.cache
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system_MarkupCompile.lref
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Sales and warehouse system.exe.config
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Sales and warehouse system.exe
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Sales and warehouse system.pdb
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.Shared.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.SqlServer.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Microsoft.Windows.Shell.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ModelLayer.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\PersianDate.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\PersianDateControls.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\RibbonControlsLibrary.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\sapbusinessobjects.wpf.viewer.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\system.windows.controls.datavisualization.toolkit.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\wpftoolkit.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\FlashControlV71.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\stdole.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ShockwaveFlashObjects.dll
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ModelLayer.pdb
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.xml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.SqlServer.xml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Microsoft.Windows.Shell.pdb
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Microsoft.Windows.Shell.xml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\RibbonControlsLibrary.pdb
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\RibbonControlsLibrary.xml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\App.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Wiin_Addproduct.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewTrans.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewPrice.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddSystemPart.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddUser.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddCoustomer.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Change_PassWord.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Inventory.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_InvoceShow.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Invoice.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ProductPrice.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Product.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Customer.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Main.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ReportList.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_sellchart.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ShowReport.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_UserLogxaml.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_users.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Win_Login.baml
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.g.resources
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales_and_warehouse_system.Properties.Resources.resources
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales_and_warehouse_system.Windows.Win_UserAcsses.resources
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales_and_warehouse_system.Windows.Win_AddPart.resources
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.csproj.GenerateResource.Cache
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.exe
+F:\My Appliction\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.pdb
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Sales and warehouse system.exe.config
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.exe
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.pdb
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Sales and warehouse system.exe
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Sales and warehouse system.pdb
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.SqlServer.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ModelLayer.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\FlashControlV71.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\stdole.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ShockwaveFlashObjects.dll
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ModelLayer.pdb
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\ModelLayer.dll.config
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.xml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\EntityFramework.SqlServer.xml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Microsoft.Windows.Shell.pdb
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\Microsoft.Windows.Shell.xml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\RibbonControlsLibrary.pdb
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\bin\Debug\RibbonControlsLibrary.xml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.csprojAssemblyReference.cache
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Theme\BubbleCreme.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Theme\ShinyDarkPurple.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Wiin_Addproduct.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewTrans.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewPrice.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddSystemPart.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddUser.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddCoustomer.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Change_PassWord.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Inventory.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_InvoceShow.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Invoice.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ProductPrice.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Product.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Customer.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Main.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ReportList.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_sellchart.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ShowReport.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_UserLogxaml.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_users.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Win_Login.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\App.g.cs
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system_MarkupCompile.cache
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system_MarkupCompile.lref
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\App.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Wiin_Addproduct.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewTrans.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddNewPrice.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddSystemPart.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddUser.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_AddCoustomer.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Change_PassWord.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Inventory.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_InvoceShow.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Invoice.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ProductPrice.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Product.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Customer.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_Main.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ReportList.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_sellchart.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_ShowReport.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_UserLogxaml.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Windows\Win_users.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Win_Login.baml
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.g.resources
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales_and_warehouse_system.Properties.Resources.resources
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales_and_warehouse_system.Windows.Win_UserAcsses.resources
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales_and_warehouse_system.Windows.Win_AddPart.resources
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.csproj.GenerateResource.cache
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.csproj.CoreCompileInputs.cache
+F:\My Appliction\WindowsApp\Systemsell\Sales and warehouse system\Sales and warehouse system\obj\Debug\Sales and warehouse system.csproj.CopyComplete

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57814B55-8E41-4D48-983B-07BD776DB08C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sales_and_warehouse_system</RootNamespace>
+    <AssemblyName>Sales and warehouse system</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PersianDate">
+      <HintPath>D:\Programing\C#\Perfesional C#(clicksite)\part5\taghvim\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls">
+      <HintPath>D:\Programing\C#\Perfesional C#(clicksite)\part5\taghvim\PersianDateControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="RibbonControlsLibrary, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="system.windows.controls.datavisualization.toolkit">
+      <HintPath>D:\Programing\C#\Perfesional C#(clicksite)\part70\system.windows.controls.datavisualization.toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="wpftoolkit">
+      <HintPath>D:\Programing\C#\Perfesional C#(clicksite)\part70\wpftoolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modul\PublicVariable.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\MyMessageBox.cs" />
+    <Compile Include="Windows\Wiin_Addproduct.xaml.cs">
+      <DependentUpon>Wiin_Addproduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_AddNewTrans.xaml.cs">
+      <DependentUpon>Win_AddNewTrans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_AddNewPrice.xaml.cs">
+      <DependentUpon>Win_AddNewPrice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_UserAcsses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Win_UserAcsses.Designer.cs">
+      <DependentUpon>Win_UserAcsses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_AddPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Win_AddPart.Designer.cs">
+      <DependentUpon>Win_AddPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_AddSystemPart.xaml.cs">
+      <DependentUpon>Win_AddSystemPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_AddUser.xaml.cs">
+      <DependentUpon>Win_AddUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_AddCoustomer.xaml.cs">
+      <DependentUpon>Win_AddCoustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_Change_PassWord.xaml.cs">
+      <DependentUpon>Win_Change_PassWord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_Inventory.xaml.cs">
+      <DependentUpon>Win_Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_InvoceShow.xaml.cs">
+      <DependentUpon>Win_InvoceShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_Invoice.xaml.cs">
+      <DependentUpon>Win_Invoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_ProductPrice.xaml.cs">
+      <DependentUpon>Win_ProductPrice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_Product.xaml.cs">
+      <DependentUpon>Win_Product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_Customer.xaml.cs">
+      <DependentUpon>Win_Customer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_Main.xaml.cs">
+      <DependentUpon>Win_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_ReportList.xaml.cs">
+      <DependentUpon>Win_ReportList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_sellchart.xaml.cs">
+      <DependentUpon>Win_sellchart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_ShowReport.xaml.cs">
+      <DependentUpon>Win_ShowReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_UserLogxaml.xaml.cs">
+      <DependentUpon>Win_UserLogxaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Win_users.xaml.cs">
+      <DependentUpon>Win_users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win_Login.xaml.cs">
+      <DependentUpon>Win_Login.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Win_UserAcsses.resx">
+      <DependentUpon>Win_UserAcsses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Win_AddPart.resx">
+      <DependentUpon>Win_AddPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Theme\BubbleCreme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\ShinyDarkPurple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Wiin_Addproduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_AddNewTrans.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Win_AddNewPrice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_AddSystemPart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_AddUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Win_AddCoustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_Change_PassWord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_Inventory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Win_InvoceShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_Invoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_ProductPrice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Win_Product.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Win_Customer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_ReportList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_sellchart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_ShowReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_UserLogxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Win_users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Win_Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\12.png" />
+    <Resource Include="img\13.png" />
+    <Resource Include="img\1cover.jpg" />
+    <Resource Include="img\2.png" />
+    <Resource Include="img\21.png" />
+    <Resource Include="img\2cover.jpg" />
+    <Resource Include="img\3cover.jpg" />
+    <Resource Include="img\4.png" />
+    <Resource Include="img\44.png" />
+    <Resource Include="img\57.jpg" />
+    <Resource Include="img\9.png" />
+    <Resource Include="img\add-icon.png" />
+    <Resource Include="img\add.png" />
+    <Resource Include="img\advanced.tiff" />
+    <Resource Include="img\ajza.png" />
+    <Resource Include="img\b3.png" />
+    <Resource Include="img\b4.png" />
+    <Resource Include="img\back22.jpg" />
+    <Resource Include="img\back23.jpg" />
+    <Resource Include="img\backcust.jpg" />
+    <Resource Include="img\background.jpg" />
+    <Resource Include="img\backGround.png" />
+    <Resource Include="img\background1.jpg" />
+    <Resource Include="img\background_main.png" />
+    <Resource Include="img\Box.png" />
+    <Resource Include="img\box_icon.png" />
+    <Resource Include="img\button_1.png" />
+    <Resource Include="img\clock.ico" />
+    <Resource Include="img\colorline.jpg" />
+    <Resource Include="img\customer.png" />
+    <Resource Include="img\dastresi.png" />
+    <Resource Include="img\del.png" />
+    <Resource Include="img\edit.png" />
+    <Resource Include="img\exit.png" />
+    <Resource Include="img\gol.jpg" />
+    <Resource Include="img\gol1.jpg" />
+    <Resource Include="img\gol2.png" />
+    <Resource Include="img\img1.jpg" />
+    <Resource Include="img\img2.jpg" />
+    <Resource Include="img\img3.jpg" />
+    <Resource Include="img\img4.jpg" />
+    <Resource Include="img\img5.jpg" />
+    <Resource Include="img\img6.jpg" />
+    <Resource Include="img\img7.jpg" />
+    <Resource Include="img\info.png" />
+    <Resource Include="img\inventory.png" />
+    <Resource Include="img\invoice.ico" />
+    <Resource Include="img\Login.jpg" />
+    <Resource Include="img\manygol.jpg" />
+    <Resource Include="img\money.png" />
+    <Resource Include="img\mottakere.png" />
+    <Resource Include="img\nemudar.jpg" />
+    <Resource Include="img\nemudar.png" />
+    <Resource Include="img\no.png" />
+    <Resource Include="img\paein.png" />
+    <Resource Include="img\price.png" />
+    <Resource Include="img\price1.png" />
+    <Resource Include="img\product.png" />
+    <Resource Include="img\product1.jpg" />
+    <Resource Include="img\product2.gif" />
+    <Resource Include="img\productdefault.png" />
+    <Resource Include="img\report.png" />
+    <Resource Include="img\report_rpt.png" />
+    <Resource Include="img\search.ico" />
+    <Resource Include="img\send.png" />
+    <Resource Include="img\server.png" />
+    <Resource Include="img\Star.png" />
+    <Resource Include="img\stock-market.png" />
+    <Resource Include="img\stock.png" />
+    <Resource Include="img\title1.jpg" />
+    <Resource Include="img\title2.jpg" />
+    <Resource Include="img\users.jpg" />
+    <Resource Include="img\user_group.png" />
+    <Resource Include="img\win_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelLayer\ModelLayer.csproj">
+      <Project>{e1f1cf20-5043-4022-aff6-a115a8bc4b67}</Project>
+      <Name>ModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\rmPbFOC-black-and-red-wallpaper-hd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\abstract-women-http-www-market-com-jpg-90635.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Inventory-Original-1024x971.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\exit-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\change_pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\document-circle-blue-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\customer_listview.png" />
+    <Resource Include="img\Foroosh_listview.png" />
+    <Resource Include="img\product_listview.png" />
+    <Resource Include="img\report1.png" />
+    <Resource Include="img\users_listview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\22.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

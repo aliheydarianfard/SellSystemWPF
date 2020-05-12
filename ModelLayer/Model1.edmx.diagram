@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86b74cc2cf1b43f288b4d24b28527c7a" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="sellModel.Coustomer" Width="1.5" PointX="10.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.Product" Width="1.5" PointX="9.125" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.ProductPrice" Width="1.5" PointX="4.625" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.sysdiagram" Width="1.5" PointX="12.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.User" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.VW_Coustomer" Width="1.5" PointX="18.125" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.VW_Product" Width="1.5" PointX="20.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.VW_ProductPrice" Width="1.5" PointX="26" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sellModel.VW_Users" Width="1.5" PointX="24" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="sellModel.FK_Coustomer_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="sellModel.FK_Product_User" ManuallyRouted="false" />
+        <AssociationConnector Association="sellModel.FK_ProductPrice_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="sellModel.FK_ProductPrice_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sellModel.Inventory" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="sellModel.VW_Inventory" Width="1.5" PointX="18.125" PointY="5.75" />
+        <AssociationConnector Association="sellModel.FK_Inventory_Product" />
+        <AssociationConnector Association="sellModel.FK_Inventory_Users" />
+        <EntityTypeShape EntityType="sellModel.UserLog" Width="2" PointX="5.125" PointY="10.25" />
+        <AssociationConnector Association="sellModel.FK_UserLog_Users" />
+        <EntityTypeShape EntityType="sellModel.VW_UserLog" Width="1.5" PointX="25.875" PointY="6.75" />
+        <EntityTypeShape EntityType="sellModel.Invoice" Width="1.5" PointX="16.375" PointY="1.75" />
+        <AssociationConnector Association="sellModel.FK_Invoice_Coustomer" />
+        <AssociationConnector Association="sellModel.FK_Invoice_Users" />
+        <EntityTypeShape EntityType="sellModel.InvoceItem" Width="1.5" PointX="13.125" PointY="6.125" />
+        <AssociationConnector Association="sellModel.FK_InvoceItem_Invoice" />
+        <AssociationConnector Association="sellModel.FK_InvoceItem_Product" />
+        <EntityTypeShape EntityType="sellModel.VW_InvoiceItem" Width="1.5" PointX="24" PointY="10.125" />
+        <EntityTypeShape EntityType="sellModel.VW_InvoiceShow" Width="2" PointX="20.625" PointY="5.625" />
+        <EntityTypeShape EntityType="sellModel.SystemPart" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="sellModel.VW_SystemPart" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="sellModel.UserAccess" Width="1.5" PointX="7" PointY="4.125" />
+        <AssociationConnector Association="sellModel.fk_UserAccess_SystemPartID" />
+        <AssociationConnector Association="sellModel.fk_UserAccess_UserID" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,117 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sales_and_warehouse_system.Windows"
+        xmlns:PersianDateControls="clr-namespace:Arash.PersianDateControls;assembly=PersianDateControls" x:Class="Sales_and_warehouse_system.Windows.Win_AddNewPrice"
+        mc:Ignorable="d"
+        Title="Win_AddNewPrice" Height="500" Width="450" Background="Transparent" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="506" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="456" Margin="-6,-6,-0.4,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFBCCBE0" Offset="0.982"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="83" Margin="-6,-6,-0.4,0" RadiusY="10" RadiusX="10" Stroke="Black" VerticalAlignment="Top" Width="456">
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFADC2D1" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="440" Source="/img/title1.jpg" Stretch="Fill" Opacity=".5"/>
+        <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="58" Margin="365,10,0,0" VerticalAlignment="Top" Width="65" Source="/Sales and warehouse system;component/img/price1.png" RenderTransformOrigin="-1.156,0.48" Stretch="Fill">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="49" Margin="10,15,0,0" VerticalAlignment="Top" Width="45" Source="/Sales and warehouse system;component/img/exit.png" RenderTransformOrigin="-0.063,0.762" MouseDown="image1_MouseDown_1" Cursor="Hand">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Label x:Name="label" Content="فرم افزودن قیمت جدید" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" FontFamily="B Ziba" FontSize="22" Height="73" Width="188" >
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0F00FF" Offset="0"/>
+                    <GradientStop Color="#FF1E1E22" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lblnameprudct" Content="Label" HorizontalAlignment="Center" Margin="15,99,29.6,0" VerticalAlignment="Top" Foreground="#FFDC1219" FontFamily="B Yekan" FontSize="36" FlowDirection="RightToLeft" Width="405" HorizontalContentAlignment="Center"/>
+        <Label x:Name="label1_Copy" Content=" :توضیحات" HorizontalAlignment="Left" Margin="278,335,0,0" VerticalAlignment="Top" Foreground="#FF1F28DA" FontFamily="B Yekan" FontSize="16"/>
+        <Label x:Name="label1_Copy1" Content="قیمت خرید :" HorizontalAlignment="Left" Margin="281,218,0,0" VerticalAlignment="Top" Foreground="#FF1F28DA" FontFamily="B Yekan" FontSize="16" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_username" Content="سسسس" HorizontalAlignment="Center" Margin="119,160,174.6,0" VerticalAlignment="Top" FlowDirection="RightToLeft" Background="#00000000" Foreground="#FF1EE711" FontFamily="B Yekan" FontSize="20" Width="156"/>
+        <Label x:Name="label1_Copy3" Content="ریال" HorizontalAlignment="Left" Margin="122,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.021,3.219" Foreground="#FFDC1219" FontFamily="B Yekan" FontSize="16"/>
+        <Label x:Name="label1_Copy4" Content="کابر ثبت کننده" HorizontalAlignment="Left" Margin="279,165,0,0" VerticalAlignment="Top" Foreground="#FF1F28DA" FontFamily="B Yekan" FontSize="16"/>
+        <Label x:Name="label1_Copy5" Content="قیمت فروش :" HorizontalAlignment="Left" Margin="284,255,0,0" VerticalAlignment="Top" Foreground="#FF1F28DA" FontFamily="B Yekan" FontSize="16" FlowDirection="RightToLeft"/>
+        <Label x:Name="label1_Copy6" Content="ریال" HorizontalAlignment="Left" Margin="123,216,0,0" VerticalAlignment="Top" Foreground="#FFDC1219" FontFamily="B Yekan" FontSize="16"/>
+        <Label x:Name="label1_Copy7" Content="تاریخ ثبت :" HorizontalAlignment="Left" Margin="282,292,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.688,1.719" Foreground="#FF1F28DA" FontFamily="B Yekan" FontSize="16" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_date" Content="Label" HorizontalAlignment="Left" Margin="179,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.771,4.062" Foreground="#FFDC1219" FontFamily="B Yekan" FontSize="16"/>
+        <TextBox x:Name="txtbuy" HorizontalAlignment="Left" Height="23" Margin="163,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF1F28DA" SelectionBrush="Black" FontSize="14" PreviewTextInput="textBox_PreviewTextInput" TabIndex="0">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDAE2EE" Offset="0"/>
+                    <GradientStop Color="#FFCFDAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtsell" HorizontalAlignment="Left" Height="23" Margin="166,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FF1F28DA" SelectionBrush="Black" FontSize="14" PreviewTextInput="textBox_Copy_PreviewTextInput" TabIndex="1">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDAE2EE" Offset="0"/>
+                    <GradientStop Color="#FFCFDAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="47" Margin="136,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Foreground="#FF1F28DA" SelectionBrush="Black" FontSize="14" TabIndex="2">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDAE2EE" Offset="0"/>
+                    <GradientStop Color="#FFCFDAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="label_Copy" Content="" HorizontalAlignment="Left" Margin="135,28,0,0" VerticalAlignment="Top" FontFamily="B Ziba" FontSize="18" Height="73" Width="188" >
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0F00FF" Offset="0"/>
+                    <GradientStop Color="#FF1E1E22" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <PersianDateControls:PersianDatePicker Name="Calnder" HorizontalAlignment="Left" Margin="113,326,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Button x:Name="button" Content="ثبت" HorizontalAlignment="Left" Margin="242,429,0,0" VerticalAlignment="Top" Width="96" Click="button_Click" TabIndex="3" Height="44" FontFamily="B Yekan" Cursor="Hand" FontSize="18" FontWeight="Bold" IsDefault="True">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFBAE3E7" Offset="0.009"/>
+                    <GradientStop Color="#FFFCFCFC" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button_Copy" Content="خروج" HorizontalAlignment="Left" Cursor="Hand"  Margin="119,429,0,0" VerticalAlignment="Top" Width="96" TabIndex="4" Height="44" FontFamily="B Yekan" FontSize="18" FontWeight="Bold" IsCancel="True">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFBAE3E7" Offset="0.009"/>
+                    <GradientStop Color="#FFFCFCFC" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

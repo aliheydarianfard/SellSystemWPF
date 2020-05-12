@@ -1,0 +1,1833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="sellModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Coustomer">
+          <Key>
+            <PropertyRef Name="CoutomerID" />
+          </Key>
+          <Property Name="CoutomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CoustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CoustomerTell" Type="nvarchar" MaxLength="50" />
+          <Property Name="CoustoemrAddres" Type="nvarchar(max)" />
+          <Property Name="SetDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UpdateDate" Type="nvarchar" MaxLength="60" />
+          <Property Name="CoustomerActive" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+          </Key>
+          <Property Name="InventoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InventoryCount" Type="int" Nullable="false" />
+          <Property Name="InventoryDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InventoryDesc" Type="nvarchar(max)" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InvoceItem">
+          <Key>
+            <PropertyRef Name="InvoceItemID" />
+          </Key>
+          <Property Name="InvoceItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoceItemCount" Type="int" Nullable="false" />
+          <Property Name="ProudactID" Type="int" Nullable="false" />
+          <Property Name="InvoceItemFeeSell" Type="bigint" Nullable="false" />
+          <Property Name="InvoceItemFeePurche" Type="bigint" Nullable="false" />
+          <Property Name="InvoiceID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceId" />
+          </Key>
+          <Property Name="InvoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceDate" Type="nvarchar" MaxLength="60" />
+          <Property Name="InvoicePrice" Type="bigint" />
+          <Property Name="InvocieDesc" Type="text" />
+          <Property Name="InvocePrice_Pourche" Type="bigint" />
+          <Property Name="CoustoemrId" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="InvoiceType" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProductDescription" Type="nvarchar(max)" />
+          <Property Name="ProdactLastPrice" Type="bigint" Nullable="false" />
+          <Property Name="ProductLastSuply" Type="int" Nullable="false" />
+          <Property Name="ProductImage" Type="image" />
+          <Property Name="ProductStartTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ProudactActive" Type="tinyint" />
+          <Property Name="ProudactLastPourchFee" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ProductPrice">
+          <Key>
+            <PropertyRef Name="ProductPriceID" />
+          </Key>
+          <Property Name="ProductPriceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductPricePurch" Type="bigint" Nullable="false" />
+          <Property Name="ProductPriceSell" Type="bigint" Nullable="false" />
+          <Property Name="ProductPriceDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductPricedesc" Type="nvarchar(max)" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="SystemPart">
+          <Key>
+            <PropertyRef Name="SystemPartID" />
+          </Key>
+          <Property Name="SystemPartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemPartName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SystemPartDetaile" Type="text" />
+          <Property Name="SystemPartLevel" Type="int" />
+        </EntityType>
+        <EntityType Name="UserAccess">
+          <Key>
+            <PropertyRef Name="UserAccessID" />
+          </Key>
+          <Property Name="UserAccessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="SystemPartID" Type="int" />
+        </EntityType>
+        <EntityType Name="UserLog">
+          <Key>
+            <PropertyRef Name="UserLogID" />
+          </Key>
+          <Property Name="UserLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ComputerName" Type="nvarchar" MaxLength="300" />
+          <Property Name="IPAddres" Type="nvarchar" MaxLength="100" />
+          <Property Name="EnterDateTime" Type="nvarchar" MaxLength="150" />
+          <Property Name="ExitDateTime" Type="nvarchar" MaxLength="150" />
+          <Property Name="UserID" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserTell" Type="varchar" MaxLength="12" />
+          <Property Name="UserUserName" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="128" />
+          <Property Name="UserAge" Type="tinyint" />
+          <Property Name="UserGender" Type="tinyint" />
+          <Property Name="UserActive" Type="tinyint" />
+          <Property Name="UserStartTime" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Coustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_Coustomer">
+          <Key>
+            <PropertyRef Name="CoutomerID" />
+            <PropertyRef Name="CoustomerName" />
+            <PropertyRef Name="SetDate" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="CoutomerID" Type="int" Nullable="false" />
+          <Property Name="CoustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CoustomerTell" Type="nvarchar" MaxLength="50" />
+          <Property Name="CoustoemrAddres" Type="nvarchar(max)" />
+          <Property Name="SetDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+          <Property Name="UpdateDate" Type="nvarchar" MaxLength="60" />
+          <Property Name="CoustomerActive" Type="tinyint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Inventory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_Inventory">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+            <PropertyRef Name="InventoryCount" />
+            <PropertyRef Name="InventoryDate" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="InventoryID" Type="int" Nullable="false" />
+          <Property Name="InventoryCount" Type="int" Nullable="false" />
+          <Property Name="InventoryDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InventoryDesc" Type="nvarchar(max)" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+          <Property Name="Stutus" Type="nvarchar" MaxLength="13" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_InvoiceItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_InvoiceItem">
+          <Key>
+            <PropertyRef Name="InvoceItemID" />
+            <PropertyRef Name="InvoceItemCount" />
+            <PropertyRef Name="InvoiceID" />
+            <PropertyRef Name="InvoceItemFeePurche" />
+            <PropertyRef Name="InvoceItemFeeSell" />
+            <PropertyRef Name="ProudactID" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="InvoceItemID" Type="int" Nullable="false" />
+          <Property Name="InvoceItemCount" Type="int" Nullable="false" />
+          <Property Name="InvoiceID" Type="int" Nullable="false" />
+          <Property Name="InvoceItemFeePurche" Type="bigint" Nullable="false" />
+          <Property Name="InvoceItemFeeSell" Type="bigint" Nullable="false" />
+          <Property Name="ProudactID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_InvoiceShow' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_InvoiceShow">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="CoustoemrId" />
+            <PropertyRef Name="InvoiceId" />
+            <PropertyRef Name="CoustomerName" />
+          </Key>
+          <Property Name="InvoiceDate" Type="nvarchar" MaxLength="60" />
+          <Property Name="InvoicePrice" Type="bigint" />
+          <Property Name="InvocieDesc" Type="text" />
+          <Property Name="InvoiceType" Type="tinyint" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="CoustoemrId" Type="int" Nullable="false" />
+          <Property Name="InvocePrice_Pourche" Type="bigint" />
+          <Property Name="InvoiceId" Type="int" Nullable="false" />
+          <Property Name="CoustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CoustomerTell" Type="nvarchar" MaxLength="50" />
+          <Property Name="CoustoemrAddres" Type="nvarchar(max)" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+          <Property Name="InvoceTypeFarsi" Type="nvarchar" MaxLength="6" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProdactLastPrice" />
+            <PropertyRef Name="ProductLastSuply" />
+            <PropertyRef Name="ProductStartTime" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProductDescription" Type="nvarchar(max)" />
+          <Property Name="ProdactLastPrice" Type="bigint" Nullable="false" />
+          <Property Name="ProductLastSuply" Type="int" Nullable="false" />
+          <Property Name="ProductImage" Type="image" />
+          <Property Name="ProductStartTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+          <Property Name="ProudactActive" Type="tinyint" />
+          <Property Name="ProudactLastPourchFee" Type="bigint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_ProductPrice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_ProductPrice">
+          <Key>
+            <PropertyRef Name="ProductPriceID" />
+            <PropertyRef Name="ProductPricePurch" />
+            <PropertyRef Name="ProductPriceSell" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductPriceDate" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="ProductPriceID" Type="int" Nullable="false" />
+          <Property Name="ProductPricePurch" Type="bigint" Nullable="false" />
+          <Property Name="ProductPriceSell" Type="bigint" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="ProductPricedesc" Type="nvarchar(max)" />
+          <Property Name="ProductPriceDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_SystemPart' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_SystemPart">
+          <Key>
+            <PropertyRef Name="SystemPartID" />
+          </Key>
+          <Property Name="SystemPartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemPartName" Type="nvarchar" MaxLength="200" />
+          <Property Name="SystemPartDetaile" Type="text" />
+          <Property Name="SystemPartLevel" Type="int" />
+          <Property Name="childecount" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_UserLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_UserLog">
+          <Key>
+            <PropertyRef Name="UserLogID" />
+          </Key>
+          <Property Name="UserLogID" Type="int" Nullable="false" />
+          <Property Name="ComputerName" Type="nvarchar" MaxLength="300" />
+          <Property Name="IPAddres" Type="nvarchar" MaxLength="100" />
+          <Property Name="EnterDateTime" Type="nvarchar" MaxLength="150" />
+          <Property Name="ExitDateTime" Type="nvarchar" MaxLength="150" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VW_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserTell" Type="varchar" MaxLength="12" />
+          <Property Name="UserUserName" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="128" />
+          <Property Name="UserAge" Type="tinyint" />
+          <Property Name="UserGender" Type="tinyint" />
+          <Property Name="UserStartTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserActive" Type="tinyint" />
+          <Property Name="UserGenderFarsi" Type="nvarchar" MaxLength="4" />
+          <Property Name="UserActiveFarsi" Type="nvarchar" MaxLength="8" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+        </EntityType>
+        <Association Name="FK_Coustomer_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Coustomer" Type="Self.Coustomer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Coustomer">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inventory_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inventory_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoceItem_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="InvoceItem" Type="Self.InvoceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="InvoceItem">
+              <PropertyRef Name="ProudactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_Coustomer">
+          <End Role="Coustomer" Type="Self.Coustomer" Multiplicity="1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Coustomer">
+              <PropertyRef Name="CoutomerID" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="CoustoemrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_User">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPrice_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductPrice">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPrice_User">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="ProductPrice">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_UserAccess_SystemPartID">
+          <End Role="SystemPart" Type="Self.SystemPart" Multiplicity="0..1" />
+          <End Role="UserAccess" Type="Self.UserAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemPart">
+              <PropertyRef Name="SystemPartID" />
+            </Principal>
+            <Dependent Role="UserAccess">
+              <PropertyRef Name="SystemPartID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_UserAccess_UserID">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="UserAccess" Type="Self.UserAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserAccess">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserLog_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="UserLog" Type="Self.UserLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserLog">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_CoustomersellChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_Del_UsserAccess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="SystemPartID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ins_product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProductDescription" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ProductImage" Type="image" Mode="In" />
+          <Parameter Name="ProductStartTime" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ins_product_whitoutimage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProductDescription" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ProductStartTime" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_lastfe_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+          <Parameter Name="ProductLastprice" Type="bigint" Mode="In" />
+          <Parameter Name="ProductLastPurche" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="sp_porforoshtarin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_porforoshtarintedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_prouductsellcountchart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_prouductsellpricechart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_sell_Chart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_selluser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_Update_exitttime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="ExitDate" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_LastSuplay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProudactCount" Type="int" Mode="In" />
+          <Parameter Name="ProudactID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+          <Parameter Name="ProudactName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProudactDes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ProductImage" Type="image" Mode="In" />
+        </Function>
+        <Function Name="sp_Update_Product_whitoutimage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+          <Parameter Name="ProudactName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProudactDes" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="sellModelStoreContainer">
+          <EntitySet Name="Coustomer" EntityType="Self.Coustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvoceItem" EntityType="Self.InvoceItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductPrice" EntityType="Self.ProductPrice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemPart" EntityType="Self.SystemPart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserAccess" EntityType="Self.UserAccess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLog" EntityType="Self.UserLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VW_Coustomer" EntityType="Self.VW_Coustomer" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_Coustomer].[CoutomerID] AS [CoutomerID], 
+    [VW_Coustomer].[CoustomerName] AS [CoustomerName], 
+    [VW_Coustomer].[CoustomerTell] AS [CoustomerTell], 
+    [VW_Coustomer].[CoustoemrAddres] AS [CoustoemrAddres], 
+    [VW_Coustomer].[SetDate] AS [SetDate], 
+    [VW_Coustomer].[UserID] AS [UserID], 
+    [VW_Coustomer].[UserName] AS [UserName], 
+    [VW_Coustomer].[UserFamily] AS [UserFamily], 
+    [VW_Coustomer].[FullName] AS [FullName], 
+    [VW_Coustomer].[UpdateDate] AS [UpdateDate], 
+    [VW_Coustomer].[CoustomerActive] AS [CoustomerActive]
+    FROM [dbo].[VW_Coustomer] AS [VW_Coustomer]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_Inventory" EntityType="Self.VW_Inventory" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_Inventory].[InventoryID] AS [InventoryID], 
+    [VW_Inventory].[InventoryCount] AS [InventoryCount], 
+    [VW_Inventory].[InventoryDate] AS [InventoryDate], 
+    [VW_Inventory].[InventoryDesc] AS [InventoryDesc], 
+    [VW_Inventory].[UserID] AS [UserID], 
+    [VW_Inventory].[UserName] AS [UserName], 
+    [VW_Inventory].[UserFamily] AS [UserFamily], 
+    [VW_Inventory].[ProductName] AS [ProductName], 
+    [VW_Inventory].[FullName] AS [FullName], 
+    [VW_Inventory].[Stutus] AS [Stutus], 
+    [VW_Inventory].[ProductID] AS [ProductID]
+    FROM [dbo].[VW_Inventory] AS [VW_Inventory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_InvoiceItem" EntityType="Self.VW_InvoiceItem" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_InvoiceItem].[InvoceItemID] AS [InvoceItemID], 
+    [VW_InvoiceItem].[InvoceItemCount] AS [InvoceItemCount], 
+    [VW_InvoiceItem].[InvoiceID] AS [InvoiceID], 
+    [VW_InvoiceItem].[InvoceItemFeePurche] AS [InvoceItemFeePurche], 
+    [VW_InvoiceItem].[InvoceItemFeeSell] AS [InvoceItemFeeSell], 
+    [VW_InvoiceItem].[ProudactID] AS [ProudactID], 
+    [VW_InvoiceItem].[ProductName] AS [ProductName], 
+    [VW_InvoiceItem].[UserName] AS [UserName], 
+    [VW_InvoiceItem].[UserFamily] AS [UserFamily], 
+    [VW_InvoiceItem].[FullName] AS [FullName]
+    FROM [dbo].[VW_InvoiceItem] AS [VW_InvoiceItem]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_InvoiceShow" EntityType="Self.VW_InvoiceShow" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_InvoiceShow].[InvoiceDate] AS [InvoiceDate], 
+    [VW_InvoiceShow].[InvoicePrice] AS [InvoicePrice], 
+    [VW_InvoiceShow].[InvocieDesc] AS [InvocieDesc], 
+    [VW_InvoiceShow].[InvoiceType] AS [InvoiceType], 
+    [VW_InvoiceShow].[UserID] AS [UserID], 
+    [VW_InvoiceShow].[CoustoemrId] AS [CoustoemrId], 
+    [VW_InvoiceShow].[InvocePrice_Pourche] AS [InvocePrice_Pourche], 
+    [VW_InvoiceShow].[InvoiceId] AS [InvoiceId], 
+    [VW_InvoiceShow].[CoustomerName] AS [CoustomerName], 
+    [VW_InvoiceShow].[CoustomerTell] AS [CoustomerTell], 
+    [VW_InvoiceShow].[CoustoemrAddres] AS [CoustoemrAddres], 
+    [VW_InvoiceShow].[UserName] AS [UserName], 
+    [VW_InvoiceShow].[UserFamily] AS [UserFamily], 
+    [VW_InvoiceShow].[FullName] AS [FullName], 
+    [VW_InvoiceShow].[InvoceTypeFarsi] AS [InvoceTypeFarsi]
+    FROM [dbo].[VW_InvoiceShow] AS [VW_InvoiceShow]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_Product" EntityType="Self.VW_Product" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_Product].[ProductID] AS [ProductID], 
+    [VW_Product].[ProductName] AS [ProductName], 
+    [VW_Product].[ProductDescription] AS [ProductDescription], 
+    [VW_Product].[ProdactLastPrice] AS [ProdactLastPrice], 
+    [VW_Product].[ProductLastSuply] AS [ProductLastSuply], 
+    [VW_Product].[ProductImage] AS [ProductImage], 
+    [VW_Product].[ProductStartTime] AS [ProductStartTime], 
+    [VW_Product].[UserID] AS [UserID], 
+    [VW_Product].[UserName] AS [UserName], 
+    [VW_Product].[UserFamily] AS [UserFamily], 
+    [VW_Product].[FullName] AS [FullName], 
+    [VW_Product].[ProudactActive] AS [ProudactActive], 
+    [VW_Product].[ProudactLastPourchFee] AS [ProudactLastPourchFee]
+    FROM [dbo].[VW_Product] AS [VW_Product]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_ProductPrice" EntityType="Self.VW_ProductPrice" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_ProductPrice].[ProductPriceID] AS [ProductPriceID], 
+    [VW_ProductPrice].[ProductPricePurch] AS [ProductPricePurch], 
+    [VW_ProductPrice].[ProductPriceSell] AS [ProductPriceSell], 
+    [VW_ProductPrice].[UserID] AS [UserID], 
+    [VW_ProductPrice].[ProductID] AS [ProductID], 
+    [VW_ProductPrice].[ProductPricedesc] AS [ProductPricedesc], 
+    [VW_ProductPrice].[ProductPriceDate] AS [ProductPriceDate], 
+    [VW_ProductPrice].[UserName] AS [UserName], 
+    [VW_ProductPrice].[UserFamily] AS [UserFamily], 
+    [VW_ProductPrice].[ProductName] AS [ProductName], 
+    [VW_ProductPrice].[FullName] AS [FullName]
+    FROM [dbo].[VW_ProductPrice] AS [VW_ProductPrice]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_SystemPart" EntityType="Self.VW_SystemPart" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_SystemPart].[SystemPartID] AS [SystemPartID], 
+    [VW_SystemPart].[SystemPartName] AS [SystemPartName], 
+    [VW_SystemPart].[SystemPartDetaile] AS [SystemPartDetaile], 
+    [VW_SystemPart].[SystemPartLevel] AS [SystemPartLevel], 
+    [VW_SystemPart].[childecount] AS [childecount]
+    FROM [dbo].[VW_SystemPart] AS [VW_SystemPart]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_UserLog" EntityType="Self.VW_UserLog" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_UserLog].[UserLogID] AS [UserLogID], 
+    [VW_UserLog].[ComputerName] AS [ComputerName], 
+    [VW_UserLog].[IPAddres] AS [IPAddres], 
+    [VW_UserLog].[EnterDateTime] AS [EnterDateTime], 
+    [VW_UserLog].[ExitDateTime] AS [ExitDateTime], 
+    [VW_UserLog].[UserID] AS [UserID], 
+    [VW_UserLog].[UserName] AS [UserName], 
+    [VW_UserLog].[UserFamily] AS [UserFamily], 
+    [VW_UserLog].[FullName] AS [FullName]
+    FROM [dbo].[VW_UserLog] AS [VW_UserLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VW_Users" EntityType="Self.VW_Users" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_Users].[UserID] AS [UserID], 
+    [VW_Users].[UserFamily] AS [UserFamily], 
+    [VW_Users].[UserName] AS [UserName], 
+    [VW_Users].[UserTell] AS [UserTell], 
+    [VW_Users].[UserUserName] AS [UserUserName], 
+    [VW_Users].[UserPassword] AS [UserPassword], 
+    [VW_Users].[UserAge] AS [UserAge], 
+    [VW_Users].[UserGender] AS [UserGender], 
+    [VW_Users].[UserStartTime] AS [UserStartTime], 
+    [VW_Users].[UserActive] AS [UserActive], 
+    [VW_Users].[UserGenderFarsi] AS [UserGenderFarsi], 
+    [VW_Users].[UserActiveFarsi] AS [UserActiveFarsi], 
+    [VW_Users].[FullName] AS [FullName]
+    FROM [dbo].[VW_Users] AS [VW_Users]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Coustomer_Users" Association="Self.FK_Coustomer_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Coustomer" EntitySet="Coustomer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inventory_Product" Association="Self.FK_Inventory_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Inventory" EntitySet="Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inventory_Users" Association="Self.FK_Inventory_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Inventory" EntitySet="Inventory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvoceItem_Product" Association="Self.FK_InvoceItem_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="InvoceItem" EntitySet="InvoceItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_Coustomer" Association="Self.FK_Invoice_Coustomer">
+            <End Role="Coustomer" EntitySet="Coustomer" />
+            <End Role="Invoice" EntitySet="Invoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_Users" Association="Self.FK_Invoice_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Invoice" EntitySet="Invoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_User" Association="Self.FK_Product_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPrice_Product" Association="Self.FK_ProductPrice_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductPrice" EntitySet="ProductPrice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPrice_User" Association="Self.FK_ProductPrice_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ProductPrice" EntitySet="ProductPrice" />
+          </AssociationSet>
+          <AssociationSet Name="fk_UserAccess_SystemPartID" Association="Self.fk_UserAccess_SystemPartID">
+            <End Role="SystemPart" EntitySet="SystemPart" />
+            <End Role="UserAccess" EntitySet="UserAccess" />
+          </AssociationSet>
+          <AssociationSet Name="fk_UserAccess_UserID" Association="Self.fk_UserAccess_UserID">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserAccess" EntitySet="UserAccess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserLog_Users" Association="Self.FK_UserLog_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserLog" EntitySet="UserLog" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sellModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Coustomer">
+          <Key>
+            <PropertyRef Name="CoutomerID" />
+          </Key>
+          <Property Name="CoutomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CoustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CoustomerTell" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CoustoemrAddres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SetDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Coustomer_Users" FromRole="Coustomer" ToRole="Users" />
+          <Property Name="UpdateDate" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="CoustomerActive" Type="Byte" />
+          <NavigationProperty Name="Invoices" Relationship="sellModel.FK_Invoice_Coustomer" FromRole="Coustomer" ToRole="Invoice" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProdactLastPrice" Type="Int64" Nullable="false" />
+          <Property Name="ProductLastSuply" Type="Int32" Nullable="false" />
+          <Property Name="ProductImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductStartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Product_User" FromRole="Product" ToRole="Users" />
+          <NavigationProperty Name="ProductPrices" Relationship="Self.FK_ProductPrice_Product" FromRole="Product" ToRole="ProductPrice" />
+          <NavigationProperty Name="Inventories" Relationship="sellModel.FK_Inventory_Product" FromRole="Product" ToRole="Inventory" />
+          <Property Name="ProudactActive" Type="Byte" />
+          <Property Name="ProudactLastPourchFee" Type="Int64" />
+          <NavigationProperty Name="InvoceItems" Relationship="sellModel.FK_InvoceItem_Product" FromRole="Product" ToRole="InvoceItem" />
+        </EntityType>
+        <EntityType Name="ProductPrice">
+          <Key>
+            <PropertyRef Name="ProductPriceID" />
+          </Key>
+          <Property Name="ProductPriceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductPricePurch" Type="Int64" Nullable="false" />
+          <Property Name="ProductPriceSell" Type="Int64" Nullable="false" />
+          <Property Name="ProductPriceDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductPricedesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_ProductPrice_Product" FromRole="ProductPrice" ToRole="Product" />
+          <NavigationProperty Name="User" Relationship="Self.FK_ProductPrice_User" FromRole="ProductPrice" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserTell" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="UserUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="UserAge" Type="Byte" />
+          <Property Name="UserGender" Type="Byte" />
+          <Property Name="UserActive" Type="Byte" />
+          <Property Name="UserStartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Coustomers" Relationship="Self.FK_Coustomer_Users" FromRole="Users" ToRole="Coustomer" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_User" FromRole="Users" ToRole="Product" />
+          <NavigationProperty Name="ProductPrices" Relationship="Self.FK_ProductPrice_User" FromRole="Users" ToRole="ProductPrice" />
+          <NavigationProperty Name="Inventories" Relationship="sellModel.FK_Inventory_Users" FromRole="User" ToRole="Inventory" />
+          <NavigationProperty Name="UserLogs" Relationship="sellModel.FK_UserLog_Users" FromRole="User" ToRole="UserLog" />
+          <NavigationProperty Name="Invoices" Relationship="sellModel.FK_Invoice_Users" FromRole="User" ToRole="Invoice" />
+          <NavigationProperty Name="UserAccesses" Relationship="sellModel.fk_UserAccess_UserID" FromRole="User" ToRole="UserAccess" />
+          </EntityType>
+        <EntityType Name="VW_Coustomer">
+          <Key>
+            <PropertyRef Name="CoutomerID" />
+            <PropertyRef Name="CoustomerName" />
+            <PropertyRef Name="SetDate" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="CoutomerID" Type="Int32" Nullable="false" />
+          <Property Name="CoustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CoustomerTell" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CoustoemrAddres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SetDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="CoustomerActive" Type="Byte" />
+        </EntityType>
+        <EntityType Name="VW_Product">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProdactLastPrice" />
+            <PropertyRef Name="ProductLastSuply" />
+            <PropertyRef Name="ProductStartTime" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProdactLastPrice" Type="Int64" Nullable="false" />
+          <Property Name="ProductLastSuply" Type="Int32" Nullable="false" />
+          <Property Name="ProductImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductStartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="ProudactActive" Type="Byte" />
+          <Property Name="ProudactLastPourchFee" Type="Int64" />
+        </EntityType>
+        <EntityType Name="VW_ProductPrice">
+          <Key>
+            <PropertyRef Name="ProductPriceID" />
+            <PropertyRef Name="ProductPricePurch" />
+            <PropertyRef Name="ProductPriceSell" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="ProductPriceDate" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="ProductPriceID" Type="Int32" Nullable="false" />
+          <Property Name="ProductPricePurch" Type="Int64" Nullable="false" />
+          <Property Name="ProductPriceSell" Type="Int64" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="ProductPricedesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPriceDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VW_Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserTell" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="UserUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="UserAge" Type="Byte" />
+          <Property Name="UserGender" Type="Byte" />
+          <Property Name="UserStartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserActive" Type="Byte" />
+          <Property Name="UserGenderFarsi" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="UserActiveFarsi" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Coustomer_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Coustomer" Type="Self.Coustomer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Coustomer">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_User">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPrice_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="ProductPrice">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductPrice_User">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="ProductPrice">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="sellEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Coustomers" EntityType="Self.Coustomer" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="ProductPrices" EntityType="Self.ProductPrice" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="VW_Coustomer" EntityType="Self.VW_Coustomer" />
+          <EntitySet Name="VW_Product" EntityType="Self.VW_Product" />
+          <EntitySet Name="VW_ProductPrice" EntityType="Self.VW_ProductPrice" />
+          <EntitySet Name="VW_Users" EntityType="Self.VW_Users" />
+          <AssociationSet Name="FK_Coustomer_Users" Association="Self.FK_Coustomer_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Coustomer" EntitySet="Coustomers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_User" Association="Self.FK_Product_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPrice_Product" Association="Self.FK_ProductPrice_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductPrice" EntitySet="ProductPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductPrice_User" Association="Self.FK_ProductPrice_User">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ProductPrice" EntitySet="ProductPrices" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(sellModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(sellModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Inventories" EntityType="sellModel.Inventory" />
+          <EntitySet Name="VW_Inventory" EntityType="sellModel.VW_Inventory" />
+          <AssociationSet Name="FK_Inventory_Product" Association="sellModel.FK_Inventory_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Inventory" EntitySet="Inventories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inventory_Users" Association="sellModel.FK_Inventory_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Inventory" EntitySet="Inventories" />
+          </AssociationSet>
+          <FunctionImport Name="sp_ins_product">
+            <Parameter Name="ProductName" Mode="In" Type="String" />
+            <Parameter Name="ProductDescription" Mode="In" Type="String" />
+            <Parameter Name="ProductImage" Mode="In" Type="Binary" />
+            <Parameter Name="ProductStartTime" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_lastfe_Product">
+            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+            <Parameter Name="ProductLastprice" Mode="In" Type="Int64" />
+            <Parameter Name="ProductLastPurche" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_LastSuplay">
+            <Parameter Name="ProudactCount" Mode="In" Type="Int32" />
+            <Parameter Name="ProudactID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="UserLogs" EntityType="sellModel.UserLog" />
+          <AssociationSet Name="FK_UserLog_Users" Association="sellModel.FK_UserLog_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserLog" EntitySet="UserLogs" />
+          </AssociationSet>
+          <FunctionImport Name="sp_update_ExitTime">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="ExitTime" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_exitttime">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="ExitDate" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="VW_UserLog" EntityType="sellModel.VW_UserLog" />
+          <FunctionImport Name="sp_Update_Product">
+            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+            <Parameter Name="ProudactName" Mode="In" Type="String" />
+            <Parameter Name="ProudactDes" Mode="In" Type="String" />
+            <Parameter Name="ProductImage" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ins_product_whitoutimage">
+            <Parameter Name="ProductName" Mode="In" Type="String" />
+            <Parameter Name="ProductDescription" Mode="In" Type="String" />
+            <Parameter Name="ProductStartTime" Mode="In" Type="String" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Update_Product_whitoutimage">
+            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+            <Parameter Name="ProudactName" Mode="In" Type="String" />
+            <Parameter Name="ProudactDes" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Invoices" EntityType="sellModel.Invoice" />
+          <AssociationSet Name="FK_Invoice_Coustomer" Association="sellModel.FK_Invoice_Coustomer">
+            <End Role="Coustomer" EntitySet="Coustomers" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_Users" Association="sellModel.FK_Invoice_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <EntitySet Name="InvoceItems" EntityType="sellModel.InvoceItem" />
+          <AssociationSet Name="FK_InvoceItem_Invoice" Association="sellModel.FK_InvoceItem_Invoice">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="InvoceItem" EntitySet="InvoceItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvoceItem_Product" Association="sellModel.FK_InvoceItem_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="InvoceItem" EntitySet="InvoceItems" />
+          </AssociationSet>
+          <EntitySet Name="VW_InvoiceItem" EntityType="sellModel.VW_InvoiceItem" />
+          <EntitySet Name="VW_InvoiceShow" EntityType="sellModel.VW_InvoiceShow" />
+          <FunctionImport Name="sp_sell_Chart" ReturnType="Collection(sellModel.sp_sell_Chart_Result)" />
+          <FunctionImport Name="sp_CoustomersellChart" ReturnType="Collection(sellModel.sp_CoustomersellChart_Result)" />
+          <FunctionImport Name="sp_prouductsellpricechart" ReturnType="Collection(sellModel.sp_prouductsellpricechart_Result)" />
+          <FunctionImport Name="sp_prouductsellcountchart" ReturnType="Collection(sellModel.sp_prouductsellcountchart_Result)" />
+          <FunctionImport Name="sp_selluser" ReturnType="Collection(sellModel.sp_selluser_Result)" />
+          <FunctionImport Name="sp_porforoshtarin" ReturnType="Collection(sellModel.sp_porforoshtarin_Result)" />
+          <FunctionImport Name="sp_porforoshtarintedad" ReturnType="Collection(sellModel.sp_porforoshtarintedad_Result)" />
+          <EntitySet Name="SystemParts" EntityType="sellModel.SystemPart" />
+          <EntitySet Name="VW_SystemPart" EntityType="sellModel.VW_SystemPart" />
+          <EntitySet Name="UserAccesses" EntityType="sellModel.UserAccess" />
+          <AssociationSet Name="fk_UserAccess_SystemPartID" Association="sellModel.fk_UserAccess_SystemPartID">
+            <End Role="SystemPart" EntitySet="SystemParts" />
+            <End Role="UserAccess" EntitySet="UserAccesses" />
+          </AssociationSet>
+          <AssociationSet Name="fk_UserAccess_UserID" Association="sellModel.fk_UserAccess_UserID">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserAccess" EntitySet="UserAccesses" />
+          </AssociationSet>
+          <FunctionImport Name="SP_Del_UsserAccess">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="SystemPartID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Inventory">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+          </Key>
+          <Property Name="InventoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InventoryCount" Type="Int32" Nullable="false" />
+          <Property Name="InventoryDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InventoryDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="sellModel.FK_Inventory_Product" FromRole="Inventory" ToRole="Product" />
+          <NavigationProperty Name="User" Relationship="sellModel.FK_Inventory_Users" FromRole="Inventory" ToRole="User" />
+        </EntityType>
+        <EntityType Name="VW_Inventory">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+            <PropertyRef Name="InventoryCount" />
+            <PropertyRef Name="InventoryDate" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ProductName" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="InventoryID" Type="Int32" Nullable="false" />
+          <Property Name="InventoryCount" Type="Int32" Nullable="false" />
+          <Property Name="InventoryDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InventoryDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="Stutus" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Inventory_Product">
+          <End Type="sellModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="sellModel.Inventory" Role="Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inventory_Users">
+          <End Type="sellModel.User" Role="User" Multiplicity="1" />
+          <End Type="sellModel.Inventory" Role="Inventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Inventory">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserLog">
+          <Key>
+            <PropertyRef Name="UserLogID" />
+          </Key>
+          <Property Name="UserLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ComputerName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EnterDateTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ExitDateTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="sellModel.FK_UserLog_Users" FromRole="UserLog" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_UserLog_Users">
+          <End Type="sellModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="sellModel.UserLog" Role="UserLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserLog">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VW_UserLog">
+          <Key>
+            <PropertyRef Name="UserLogID" />
+          </Key>
+          <Property Name="UserLogID" Type="Int32" Nullable="false" />
+          <Property Name="ComputerName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EnterDateTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ExitDateTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceId" />
+          </Key>
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceDate" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="InvoicePrice" Type="Int64" />
+          <Property Name="InvocieDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CoustoemrId" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Coustomer" Relationship="sellModel.FK_Invoice_Coustomer" FromRole="Invoice" ToRole="Coustomer" />
+          <NavigationProperty Name="User" Relationship="sellModel.FK_Invoice_Users" FromRole="Invoice" ToRole="User" />
+          <Property Name="InvocePrice_Pourche" Type="Int64" />
+          <NavigationProperty Name="InvoceItems" Relationship="sellModel.FK_InvoceItem_Invoice" FromRole="Invoice" ToRole="InvoceItem" />
+          <Property Name="InvoiceType" Type="Byte" />
+        </EntityType>
+        <Association Name="FK_Invoice_Coustomer">
+          <End Type="sellModel.Coustomer" Role="Coustomer" Multiplicity="1" />
+          <End Type="sellModel.Invoice" Role="Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Coustomer">
+              <PropertyRef Name="CoutomerID" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="CoustoemrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_Users">
+          <End Type="sellModel.User" Role="User" Multiplicity="1" />
+          <End Type="sellModel.Invoice" Role="Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="InvoceItem">
+          <Key>
+            <PropertyRef Name="InvoceItemID" />
+          </Key>
+          <Property Name="InvoceItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoceItemCount" Type="Int32" Nullable="false" />
+          <Property Name="ProudactID" Type="Int32" Nullable="false" />
+          <Property Name="InvoceItemFeeSell" Type="Int64" Nullable="false" />
+          <Property Name="InvoceItemFeePurche" Type="Int64" Nullable="false" />
+          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoice" Relationship="sellModel.FK_InvoceItem_Invoice" FromRole="InvoceItem" ToRole="Invoice" />
+          <NavigationProperty Name="Product" Relationship="sellModel.FK_InvoceItem_Product" FromRole="InvoceItem" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_InvoceItem_Invoice">
+          <End Type="sellModel.Invoice" Role="Invoice" Multiplicity="1" />
+          <End Type="sellModel.InvoceItem" Role="InvoceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="InvoiceId" />
+            </Principal>
+            <Dependent Role="InvoceItem">
+              <PropertyRef Name="InvoiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvoceItem_Product">
+          <End Type="sellModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="sellModel.InvoceItem" Role="InvoceItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="InvoceItem">
+              <PropertyRef Name="ProudactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="VW_InvoiceItem">
+          <Key>
+            <PropertyRef Name="InvoceItemID" />
+            <PropertyRef Name="InvoceItemCount" />
+            <PropertyRef Name="InvoiceID" />
+            <PropertyRef Name="InvoceItemFeePurche" />
+            <PropertyRef Name="InvoceItemFeeSell" />
+            <PropertyRef Name="ProudactID" />
+            <PropertyRef Name="ProductName" />
+          </Key>
+          <Property Name="InvoceItemID" Type="Int32" Nullable="false" />
+          <Property Name="InvoceItemCount" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+          <Property Name="InvoceItemFeePurche" Type="Int64" Nullable="false" />
+          <Property Name="InvoceItemFeeSell" Type="Int64" Nullable="false" />
+          <Property Name="ProudactID" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VW_InvoiceShow">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="CoustoemrId" />
+            <PropertyRef Name="InvoiceId" />
+            <PropertyRef Name="CoustomerName" />
+          </Key>
+          <Property Name="InvoiceDate" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="InvoicePrice" Type="Int64" />
+          <Property Name="InvocieDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceType" Type="Byte" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="CoustoemrId" Type="Int32" Nullable="false" />
+          <Property Name="InvocePrice_Pourche" Type="Int64" />
+          <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+          <Property Name="CoustomerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CoustomerTell" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CoustoemrAddres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserFamily" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="InvoceTypeFarsi" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="sp_sell_Chart_Result">
+          <Property Type="Int64" Name="TotalPrice" Nullable="true" />
+          <Property Type="String" Name="InvoiceDate" Nullable="true" MaxLength="60" />
+        </ComplexType>
+        <ComplexType Name="sp_CoustomersellChart_Result">
+          <Property Type="String" Name="CoustomerName" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="totalprice" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_prouductsellpricechart_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="100" />
+          <Property Type="Int64" Name="totalprice" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_prouductsellcountchart_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="totalcount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_selluser_Result">
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="101" />
+          <Property Type="Int64" Name="totalcount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_porforoshtarin_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="100" />
+          <Property Type="Int64" Name="totalprice" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_porforoshtarintedad_Result">
+          <Property Type="String" Name="ProductName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="totalcount" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="SystemPart">
+          <Key>
+            <PropertyRef Name="SystemPartID" />
+          </Key>
+          <Property Name="SystemPartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemPartName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SystemPartDetaile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SystemPartLevel" Type="Int32" />
+          <NavigationProperty Name="UserAccesses" Relationship="sellModel.fk_UserAccess_SystemPartID" FromRole="SystemPart" ToRole="UserAccess" />
+        </EntityType>
+        <EntityType Name="VW_SystemPart">
+          <Key>
+            <PropertyRef Name="SystemPartID" />
+          </Key>
+          <Property Name="SystemPartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemPartName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SystemPartDetaile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SystemPartLevel" Type="Int32" />
+          <Property Name="childecount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UserAccess">
+          <Key>
+            <PropertyRef Name="UserAccessID" />
+          </Key>
+          <Property Name="UserAccessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="SystemPartID" Type="Int32" />
+          <NavigationProperty Name="SystemPart" Relationship="sellModel.fk_UserAccess_SystemPartID" FromRole="UserAccess" ToRole="SystemPart" />
+          <NavigationProperty Name="User" Relationship="sellModel.fk_UserAccess_UserID" FromRole="UserAccess" ToRole="User" />
+        </EntityType>
+        <Association Name="fk_UserAccess_SystemPartID">
+          <End Type="sellModel.SystemPart" Role="SystemPart" Multiplicity="0..1" />
+          <End Type="sellModel.UserAccess" Role="UserAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemPart">
+              <PropertyRef Name="SystemPartID" />
+            </Principal>
+            <Dependent Role="UserAccess">
+              <PropertyRef Name="SystemPartID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_UserAccess_UserID">
+          <End Type="sellModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="sellModel.UserAccess" Role="UserAccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserAccess">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sellModelStoreContainer" CdmEntityContainer="sellEntities">
+          <EntitySetMapping Name="Coustomers">
+            <EntityTypeMapping TypeName="sellModel.Coustomer">
+              <MappingFragment StoreEntitySet="Coustomer">
+                <ScalarProperty Name="CoustomerActive" ColumnName="CoustomerActive" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CoutomerID" ColumnName="CoutomerID" />
+                <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+                <ScalarProperty Name="CoustomerTell" ColumnName="CoustomerTell" />
+                <ScalarProperty Name="CoustoemrAddres" ColumnName="CoustoemrAddres" />
+                <ScalarProperty Name="SetDate" ColumnName="SetDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="sellModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProudactLastPourchFee" ColumnName="ProudactLastPourchFee" />
+                <ScalarProperty Name="ProudactActive" ColumnName="ProudactActive" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProdactLastPrice" ColumnName="ProdactLastPrice" />
+                <ScalarProperty Name="ProductLastSuply" ColumnName="ProductLastSuply" />
+                <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+                <ScalarProperty Name="ProductStartTime" ColumnName="ProductStartTime" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductPrices">
+            <EntityTypeMapping TypeName="sellModel.ProductPrice">
+              <MappingFragment StoreEntitySet="ProductPrice">
+                <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+                <ScalarProperty Name="ProductPricePurch" ColumnName="ProductPricePurch" />
+                <ScalarProperty Name="ProductPriceSell" ColumnName="ProductPriceSell" />
+                <ScalarProperty Name="ProductPriceDate" ColumnName="ProductPriceDate" />
+                <ScalarProperty Name="ProductPricedesc" ColumnName="ProductPricedesc" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="sellModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="sellModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="UserTell" ColumnName="UserTell" />
+                <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+                <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+                <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+                <ScalarProperty Name="UserStartTime" ColumnName="UserStartTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_Coustomer">
+            <EntityTypeMapping TypeName="sellModel.VW_Coustomer">
+              <MappingFragment StoreEntitySet="VW_Coustomer">
+                <ScalarProperty Name="CoustomerActive" ColumnName="CoustomerActive" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="CoutomerID" ColumnName="CoutomerID" />
+                <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+                <ScalarProperty Name="CoustomerTell" ColumnName="CoustomerTell" />
+                <ScalarProperty Name="CoustoemrAddres" ColumnName="CoustoemrAddres" />
+                <ScalarProperty Name="SetDate" ColumnName="SetDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_Product">
+            <EntityTypeMapping TypeName="sellModel.VW_Product">
+              <MappingFragment StoreEntitySet="VW_Product">
+                <ScalarProperty Name="ProudactLastPourchFee" ColumnName="ProudactLastPourchFee" />
+                <ScalarProperty Name="ProudactActive" ColumnName="ProudactActive" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="ProdactLastPrice" ColumnName="ProdactLastPrice" />
+                <ScalarProperty Name="ProductLastSuply" ColumnName="ProductLastSuply" />
+                <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+                <ScalarProperty Name="ProductStartTime" ColumnName="ProductStartTime" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_ProductPrice">
+            <EntityTypeMapping TypeName="sellModel.VW_ProductPrice">
+              <MappingFragment StoreEntitySet="VW_ProductPrice">
+                <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+                <ScalarProperty Name="ProductPricePurch" ColumnName="ProductPricePurch" />
+                <ScalarProperty Name="ProductPriceSell" ColumnName="ProductPriceSell" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductPricedesc" ColumnName="ProductPricedesc" />
+                <ScalarProperty Name="ProductPriceDate" ColumnName="ProductPriceDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_Users">
+            <EntityTypeMapping TypeName="sellModel.VW_Users">
+              <MappingFragment StoreEntitySet="VW_Users">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserTell" ColumnName="UserTell" />
+                <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+                <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+                <ScalarProperty Name="UserStartTime" ColumnName="UserStartTime" />
+                <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+                <ScalarProperty Name="UserGenderFarsi" ColumnName="UserGenderFarsi" />
+                <ScalarProperty Name="UserActiveFarsi" ColumnName="UserActiveFarsi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="sellModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="sellModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="sellModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="sellModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="sellModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="sellModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="sellModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Inventories">
+            <EntityTypeMapping TypeName="sellModel.Inventory">
+              <MappingFragment StoreEntitySet="Inventory">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InventoryDesc" ColumnName="InventoryDesc" />
+                <ScalarProperty Name="InventoryDate" ColumnName="InventoryDate" />
+                <ScalarProperty Name="InventoryCount" ColumnName="InventoryCount" />
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_Inventory">
+            <EntityTypeMapping TypeName="sellModel.VW_Inventory">
+              <MappingFragment StoreEntitySet="VW_Inventory">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Stutus" ColumnName="Stutus" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InventoryDesc" ColumnName="InventoryDesc" />
+                <ScalarProperty Name="InventoryDate" ColumnName="InventoryDate" />
+                <ScalarProperty Name="InventoryCount" ColumnName="InventoryCount" />
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_ins_product" FunctionName="sellModel.Store.sp_ins_product" />
+          <FunctionImportMapping FunctionImportName="sp_lastfe_Product" FunctionName="sellModel.Store.sp_lastfe_Product" />
+          <FunctionImportMapping FunctionImportName="sp_Update_LastSuplay" FunctionName="sellModel.Store.sp_Update_LastSuplay" />
+          <EntitySetMapping Name="UserLogs">
+            <EntityTypeMapping TypeName="sellModel.UserLog">
+              <MappingFragment StoreEntitySet="UserLog">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ExitDateTime" ColumnName="ExitDateTime" />
+                <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+                <ScalarProperty Name="IPAddres" ColumnName="IPAddres" />
+                <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+                <ScalarProperty Name="UserLogID" ColumnName="UserLogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_Update_exitttime" FunctionName="sellModel.Store.sp_Update_exitttime" />
+          <EntitySetMapping Name="VW_UserLog">
+            <EntityTypeMapping TypeName="sellModel.VW_UserLog">
+              <MappingFragment StoreEntitySet="VW_UserLog">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ExitDateTime" ColumnName="ExitDateTime" />
+                <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+                <ScalarProperty Name="IPAddres" ColumnName="IPAddres" />
+                <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+                <ScalarProperty Name="UserLogID" ColumnName="UserLogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_Update_Product" FunctionName="sellModel.Store.sp_Update_Product" />
+          <FunctionImportMapping FunctionImportName="sp_ins_product_whitoutimage" FunctionName="sellModel.Store.sp_ins_product_whitoutimage" />
+          <FunctionImportMapping FunctionImportName="sp_Update_Product_whitoutimage" FunctionName="sellModel.Store.sp_Update_Product_whitoutimage" />
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="sellModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+                <ScalarProperty Name="InvocePrice_Pourche" ColumnName="InvocePrice_Pourche" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CoustoemrId" ColumnName="CoustoemrId" />
+                <ScalarProperty Name="InvocieDesc" ColumnName="InvocieDesc" />
+                <ScalarProperty Name="InvoicePrice" ColumnName="InvoicePrice" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvoceItems">
+            <EntityTypeMapping TypeName="sellModel.InvoceItem">
+              <MappingFragment StoreEntitySet="InvoceItem">
+                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+                <ScalarProperty Name="InvoceItemFeePurche" ColumnName="InvoceItemFeePurche" />
+                <ScalarProperty Name="InvoceItemFeeSell" ColumnName="InvoceItemFeeSell" />
+                <ScalarProperty Name="ProudactID" ColumnName="ProudactID" />
+                <ScalarProperty Name="InvoceItemCount" ColumnName="InvoceItemCount" />
+                <ScalarProperty Name="InvoceItemID" ColumnName="InvoceItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_InvoiceItem">
+            <EntityTypeMapping TypeName="sellModel.VW_InvoiceItem">
+              <MappingFragment StoreEntitySet="VW_InvoiceItem">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProudactID" ColumnName="ProudactID" />
+                <ScalarProperty Name="InvoceItemFeeSell" ColumnName="InvoceItemFeeSell" />
+                <ScalarProperty Name="InvoceItemFeePurche" ColumnName="InvoceItemFeePurche" />
+                <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+                <ScalarProperty Name="InvoceItemCount" ColumnName="InvoceItemCount" />
+                <ScalarProperty Name="InvoceItemID" ColumnName="InvoceItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_InvoiceShow">
+            <EntityTypeMapping TypeName="sellModel.VW_InvoiceShow">
+              <MappingFragment StoreEntitySet="VW_InvoiceShow">
+                <ScalarProperty Name="InvoceTypeFarsi" ColumnName="InvoceTypeFarsi" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="CoustoemrAddres" ColumnName="CoustoemrAddres" />
+                <ScalarProperty Name="CoustomerTell" ColumnName="CoustomerTell" />
+                <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+                <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+                <ScalarProperty Name="InvocePrice_Pourche" ColumnName="InvocePrice_Pourche" />
+                <ScalarProperty Name="CoustoemrId" ColumnName="CoustoemrId" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+                <ScalarProperty Name="InvocieDesc" ColumnName="InvocieDesc" />
+                <ScalarProperty Name="InvoicePrice" ColumnName="InvoicePrice" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_sell_Chart" FunctionName="sellModel.Store.sp_sell_Chart">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_sell_Chart_Result">
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_CoustomersellChart" FunctionName="sellModel.Store.sp_CoustomersellChart">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_CoustomersellChart_Result">
+                <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+                <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_prouductsellpricechart" FunctionName="sellModel.Store.sp_prouductsellpricechart">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_prouductsellpricechart_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_prouductsellcountchart" FunctionName="sellModel.Store.sp_prouductsellcountchart">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_prouductsellcountchart_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="totalcount" ColumnName="totalcount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_selluser" FunctionName="sellModel.Store.sp_selluser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_selluser_Result">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="totalcount" ColumnName="totalcount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_porforoshtarin" FunctionName="sellModel.Store.sp_porforoshtarin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_porforoshtarin_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_porforoshtarintedad" FunctionName="sellModel.Store.sp_porforoshtarintedad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sellModel.sp_porforoshtarintedad_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="totalcount" ColumnName="totalcount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="SystemParts">
+            <EntityTypeMapping TypeName="sellModel.SystemPart">
+              <MappingFragment StoreEntitySet="SystemPart">
+                <ScalarProperty Name="SystemPartLevel" ColumnName="SystemPartLevel" />
+                <ScalarProperty Name="SystemPartDetaile" ColumnName="SystemPartDetaile" />
+                <ScalarProperty Name="SystemPartName" ColumnName="SystemPartName" />
+                <ScalarProperty Name="SystemPartID" ColumnName="SystemPartID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_SystemPart">
+            <EntityTypeMapping TypeName="sellModel.VW_SystemPart">
+              <MappingFragment StoreEntitySet="VW_SystemPart">
+                <ScalarProperty Name="childecount" ColumnName="childecount" />
+                <ScalarProperty Name="SystemPartLevel" ColumnName="SystemPartLevel" />
+                <ScalarProperty Name="SystemPartDetaile" ColumnName="SystemPartDetaile" />
+                <ScalarProperty Name="SystemPartName" ColumnName="SystemPartName" />
+                <ScalarProperty Name="SystemPartID" ColumnName="SystemPartID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAccesses">
+            <EntityTypeMapping TypeName="sellModel.UserAccess">
+              <MappingFragment StoreEntitySet="UserAccess">
+                <ScalarProperty Name="SystemPartID" ColumnName="SystemPartID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserAccessID" ColumnName="UserAccessID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_Del_UsserAccess" FunctionName="sellModel.Store.SP_Del_UsserAccess" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

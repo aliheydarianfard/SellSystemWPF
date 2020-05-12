@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sellModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Coustomer">
+    <Key>
+      <PropertyRef Name="CoutomerID" />
+    </Key>
+    <Property Name="CoutomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CoustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoustomerTell" Type="nvarchar" MaxLength="50" />
+    <Property Name="CoustoemrAddres" Type="nvarchar(max)" />
+    <Property Name="SetDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UpdateDate" Type="nvarchar" MaxLength="60" />
+    <Property Name="CoustomerActive" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="InventoryID" />
+    </Key>
+    <Property Name="InventoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InventoryCount" Type="int" Nullable="false" />
+    <Property Name="InventoryDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InventoryDesc" Type="nvarchar(max)" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoceItem">
+    <Key>
+      <PropertyRef Name="InvoceItemID" />
+    </Key>
+    <Property Name="InvoceItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoceItemCount" Type="int" Nullable="false" />
+    <Property Name="ProudactID" Type="int" Nullable="false" />
+    <Property Name="InvoceItemFeeSell" Type="bigint" Nullable="false" />
+    <Property Name="InvoceItemFeePurche" Type="bigint" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="InvoiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceDate" Type="nvarchar" MaxLength="60" />
+    <Property Name="InvoicePrice" Type="bigint" />
+    <Property Name="InvocieDesc" Type="text" />
+    <Property Name="InvocePrice_Pourche" Type="bigint" />
+    <Property Name="CoustoemrId" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="InvoiceType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="ProdactLastPrice" Type="bigint" Nullable="false" />
+    <Property Name="ProductLastSuply" Type="int" Nullable="false" />
+    <Property Name="ProductImage" Type="image" />
+    <Property Name="ProductStartTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ProudactActive" Type="tinyint" />
+    <Property Name="ProudactLastPourchFee" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ProductPrice">
+    <Key>
+      <PropertyRef Name="ProductPriceID" />
+    </Key>
+    <Property Name="ProductPriceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductPricePurch" Type="bigint" Nullable="false" />
+    <Property Name="ProductPriceSell" Type="bigint" Nullable="false" />
+    <Property Name="ProductPriceDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductPricedesc" Type="nvarchar(max)" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="SystemPart">
+    <Key>
+      <PropertyRef Name="SystemPartID" />
+    </Key>
+    <Property Name="SystemPartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SystemPartName" Type="nvarchar" MaxLength="200" />
+    <Property Name="SystemPartDetaile" Type="text" />
+    <Property Name="SystemPartLevel" Type="int" />
+  </EntityType>
+  <EntityType Name="UserAccess">
+    <Key>
+      <PropertyRef Name="UserAccessID" />
+    </Key>
+    <Property Name="UserAccessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="SystemPartID" Type="int" />
+  </EntityType>
+  <EntityType Name="UserLog">
+    <Key>
+      <PropertyRef Name="UserLogID" />
+    </Key>
+    <Property Name="UserLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar" MaxLength="300" />
+    <Property Name="IPAddres" Type="nvarchar" MaxLength="100" />
+    <Property Name="EnterDateTime" Type="nvarchar" MaxLength="150" />
+    <Property Name="ExitDateTime" Type="nvarchar" MaxLength="150" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserTell" Type="varchar" MaxLength="12" />
+    <Property Name="UserUserName" Type="varchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="128" />
+    <Property Name="UserAge" Type="tinyint" />
+    <Property Name="UserGender" Type="tinyint" />
+    <Property Name="UserActive" Type="tinyint" />
+    <Property Name="UserStartTime" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Coustomer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_Coustomer">
+    <Key>
+      <PropertyRef Name="CoutomerID" />
+      <PropertyRef Name="CoustomerName" />
+      <PropertyRef Name="SetDate" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="CoutomerID" Type="int" Nullable="false" />
+    <Property Name="CoustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoustomerTell" Type="nvarchar" MaxLength="50" />
+    <Property Name="CoustoemrAddres" Type="nvarchar(max)" />
+    <Property Name="SetDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+    <Property Name="UpdateDate" Type="nvarchar" MaxLength="60" />
+    <Property Name="CoustomerActive" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Inventory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_Inventory">
+    <Key>
+      <PropertyRef Name="InventoryID" />
+      <PropertyRef Name="InventoryCount" />
+      <PropertyRef Name="InventoryDate" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="InventoryID" Type="int" Nullable="false" />
+    <Property Name="InventoryCount" Type="int" Nullable="false" />
+    <Property Name="InventoryDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InventoryDesc" Type="nvarchar(max)" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+    <Property Name="Stutus" Type="nvarchar" MaxLength="13" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_InvoiceItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_InvoiceItem">
+    <Key>
+      <PropertyRef Name="InvoceItemID" />
+      <PropertyRef Name="InvoceItemCount" />
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="InvoceItemFeePurche" />
+      <PropertyRef Name="InvoceItemFeeSell" />
+      <PropertyRef Name="ProudactID" />
+      <PropertyRef Name="ProductName" />
+    </Key>
+    <Property Name="InvoceItemID" Type="int" Nullable="false" />
+    <Property Name="InvoceItemCount" Type="int" Nullable="false" />
+    <Property Name="InvoiceID" Type="int" Nullable="false" />
+    <Property Name="InvoceItemFeePurche" Type="bigint" Nullable="false" />
+    <Property Name="InvoceItemFeeSell" Type="bigint" Nullable="false" />
+    <Property Name="ProudactID" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_InvoiceShow' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_InvoiceShow">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="CoustoemrId" />
+      <PropertyRef Name="InvoiceId" />
+      <PropertyRef Name="CoustomerName" />
+    </Key>
+    <Property Name="InvoiceDate" Type="nvarchar" MaxLength="60" />
+    <Property Name="InvoicePrice" Type="bigint" />
+    <Property Name="InvocieDesc" Type="text" />
+    <Property Name="InvoiceType" Type="tinyint" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="CoustoemrId" Type="int" Nullable="false" />
+    <Property Name="InvocePrice_Pourche" Type="bigint" />
+    <Property Name="InvoiceId" Type="int" Nullable="false" />
+    <Property Name="CoustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoustomerTell" Type="nvarchar" MaxLength="50" />
+    <Property Name="CoustoemrAddres" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+    <Property Name="InvoceTypeFarsi" Type="nvarchar" MaxLength="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ProductName" />
+      <PropertyRef Name="ProdactLastPrice" />
+      <PropertyRef Name="ProductLastSuply" />
+      <PropertyRef Name="ProductStartTime" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="ProdactLastPrice" Type="bigint" Nullable="false" />
+    <Property Name="ProductLastSuply" Type="int" Nullable="false" />
+    <Property Name="ProductImage" Type="image" />
+    <Property Name="ProductStartTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+    <Property Name="ProudactActive" Type="tinyint" />
+    <Property Name="ProudactLastPourchFee" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_ProductPrice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_ProductPrice">
+    <Key>
+      <PropertyRef Name="ProductPriceID" />
+      <PropertyRef Name="ProductPricePurch" />
+      <PropertyRef Name="ProductPriceSell" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ProductPriceDate" />
+      <PropertyRef Name="ProductName" />
+    </Key>
+    <Property Name="ProductPriceID" Type="int" Nullable="false" />
+    <Property Name="ProductPricePurch" Type="bigint" Nullable="false" />
+    <Property Name="ProductPriceSell" Type="bigint" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ProductPricedesc" Type="nvarchar(max)" />
+    <Property Name="ProductPriceDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_SystemPart' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_SystemPart">
+    <Key>
+      <PropertyRef Name="SystemPartID" />
+    </Key>
+    <Property Name="SystemPartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SystemPartName" Type="nvarchar" MaxLength="200" />
+    <Property Name="SystemPartDetaile" Type="text" />
+    <Property Name="SystemPartLevel" Type="int" />
+    <Property Name="childecount" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_UserLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_UserLog">
+    <Key>
+      <PropertyRef Name="UserLogID" />
+    </Key>
+    <Property Name="UserLogID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar" MaxLength="300" />
+    <Property Name="IPAddres" Type="nvarchar" MaxLength="100" />
+    <Property Name="EnterDateTime" Type="nvarchar" MaxLength="150" />
+    <Property Name="ExitDateTime" Type="nvarchar" MaxLength="150" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sell.dbo.VW_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserTell" Type="varchar" MaxLength="12" />
+    <Property Name="UserUserName" Type="varchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="128" />
+    <Property Name="UserAge" Type="tinyint" />
+    <Property Name="UserGender" Type="tinyint" />
+    <Property Name="UserStartTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserActive" Type="tinyint" />
+    <Property Name="UserGenderFarsi" Type="nvarchar" MaxLength="4" />
+    <Property Name="UserActiveFarsi" Type="nvarchar" MaxLength="8" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="101" />
+  </EntityType>
+  <Association Name="FK_Coustomer_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Coustomer" Type="Self.Coustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Coustomer">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventory_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InvoceItem_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="InvoceItem" Type="Self.InvoceItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="InvoceItem">
+        <PropertyRef Name="ProudactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Coustomer">
+    <End Role="Coustomer" Type="Self.Coustomer" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Coustomer">
+        <PropertyRef Name="CoutomerID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="CoustoemrId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPrice_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductPrice">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPrice_User">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="ProductPrice" Type="Self.ProductPrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ProductPrice">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserAccess_SystemPartID">
+    <End Role="SystemPart" Type="Self.SystemPart" Multiplicity="0..1" />
+    <End Role="UserAccess" Type="Self.UserAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemPart">
+        <PropertyRef Name="SystemPartID" />
+      </Principal>
+      <Dependent Role="UserAccess">
+        <PropertyRef Name="SystemPartID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserAccess_UserID">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="UserAccess" Type="Self.UserAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserAccess">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLog_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="UserLog" Type="Self.UserLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserLog">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_CoustomersellChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_Del_UsserAccess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="SystemPartID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ins_product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductDescription" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProductImage" Type="image" Mode="In" />
+    <Parameter Name="ProductStartTime" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ins_product_whitoutimage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductDescription" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProductStartTime" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_lastfe_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ProductLastprice" Type="bigint" Mode="In" />
+    <Parameter Name="ProductLastPurche" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_porforoshtarin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_porforoshtarintedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_prouductsellcountchart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_prouductsellpricechart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_sell_Chart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_selluser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Update_exitttime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="ExitDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_LastSuplay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProudactCount" Type="int" Mode="In" />
+    <Parameter Name="ProudactID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ProudactName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProudactDes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProductImage" Type="image" Mode="In" />
+  </Function>
+  <Function Name="sp_Update_Product_whitoutimage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ProudactName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProudactDes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="sellModelStoreContainer">
+    <EntitySet Name="Coustomer" EntityType="Self.Coustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoceItem" EntityType="Self.InvoceItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductPrice" EntityType="Self.ProductPrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemPart" EntityType="Self.SystemPart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAccess" EntityType="Self.UserAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLog" EntityType="Self.UserLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VW_Coustomer" EntityType="Self.VW_Coustomer" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Coustomer].[CoutomerID] AS [CoutomerID], 
+    [VW_Coustomer].[CoustomerName] AS [CoustomerName], 
+    [VW_Coustomer].[CoustomerTell] AS [CoustomerTell], 
+    [VW_Coustomer].[CoustoemrAddres] AS [CoustoemrAddres], 
+    [VW_Coustomer].[SetDate] AS [SetDate], 
+    [VW_Coustomer].[UserID] AS [UserID], 
+    [VW_Coustomer].[UserName] AS [UserName], 
+    [VW_Coustomer].[UserFamily] AS [UserFamily], 
+    [VW_Coustomer].[FullName] AS [FullName], 
+    [VW_Coustomer].[UpdateDate] AS [UpdateDate], 
+    [VW_Coustomer].[CoustomerActive] AS [CoustomerActive]
+    FROM [dbo].[VW_Coustomer] AS [VW_Coustomer]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_Inventory" EntityType="Self.VW_Inventory" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Inventory].[InventoryID] AS [InventoryID], 
+    [VW_Inventory].[InventoryCount] AS [InventoryCount], 
+    [VW_Inventory].[InventoryDate] AS [InventoryDate], 
+    [VW_Inventory].[InventoryDesc] AS [InventoryDesc], 
+    [VW_Inventory].[UserID] AS [UserID], 
+    [VW_Inventory].[UserName] AS [UserName], 
+    [VW_Inventory].[UserFamily] AS [UserFamily], 
+    [VW_Inventory].[ProductName] AS [ProductName], 
+    [VW_Inventory].[FullName] AS [FullName], 
+    [VW_Inventory].[Stutus] AS [Stutus], 
+    [VW_Inventory].[ProductID] AS [ProductID]
+    FROM [dbo].[VW_Inventory] AS [VW_Inventory]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_InvoiceItem" EntityType="Self.VW_InvoiceItem" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_InvoiceItem].[InvoceItemID] AS [InvoceItemID], 
+    [VW_InvoiceItem].[InvoceItemCount] AS [InvoceItemCount], 
+    [VW_InvoiceItem].[InvoiceID] AS [InvoiceID], 
+    [VW_InvoiceItem].[InvoceItemFeePurche] AS [InvoceItemFeePurche], 
+    [VW_InvoiceItem].[InvoceItemFeeSell] AS [InvoceItemFeeSell], 
+    [VW_InvoiceItem].[ProudactID] AS [ProudactID], 
+    [VW_InvoiceItem].[ProductName] AS [ProductName], 
+    [VW_InvoiceItem].[UserName] AS [UserName], 
+    [VW_InvoiceItem].[UserFamily] AS [UserFamily], 
+    [VW_InvoiceItem].[FullName] AS [FullName]
+    FROM [dbo].[VW_InvoiceItem] AS [VW_InvoiceItem]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_InvoiceShow" EntityType="Self.VW_InvoiceShow" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_InvoiceShow].[InvoiceDate] AS [InvoiceDate], 
+    [VW_InvoiceShow].[InvoicePrice] AS [InvoicePrice], 
+    [VW_InvoiceShow].[InvocieDesc] AS [InvocieDesc], 
+    [VW_InvoiceShow].[InvoiceType] AS [InvoiceType], 
+    [VW_InvoiceShow].[UserID] AS [UserID], 
+    [VW_InvoiceShow].[CoustoemrId] AS [CoustoemrId], 
+    [VW_InvoiceShow].[InvocePrice_Pourche] AS [InvocePrice_Pourche], 
+    [VW_InvoiceShow].[InvoiceId] AS [InvoiceId], 
+    [VW_InvoiceShow].[CoustomerName] AS [CoustomerName], 
+    [VW_InvoiceShow].[CoustomerTell] AS [CoustomerTell], 
+    [VW_InvoiceShow].[CoustoemrAddres] AS [CoustoemrAddres], 
+    [VW_InvoiceShow].[UserName] AS [UserName], 
+    [VW_InvoiceShow].[UserFamily] AS [UserFamily], 
+    [VW_InvoiceShow].[FullName] AS [FullName], 
+    [VW_InvoiceShow].[InvoceTypeFarsi] AS [InvoceTypeFarsi]
+    FROM [dbo].[VW_InvoiceShow] AS [VW_InvoiceShow]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_Product" EntityType="Self.VW_Product" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Product].[ProductID] AS [ProductID], 
+    [VW_Product].[ProductName] AS [ProductName], 
+    [VW_Product].[ProductDescription] AS [ProductDescription], 
+    [VW_Product].[ProdactLastPrice] AS [ProdactLastPrice], 
+    [VW_Product].[ProductLastSuply] AS [ProductLastSuply], 
+    [VW_Product].[ProductImage] AS [ProductImage], 
+    [VW_Product].[ProductStartTime] AS [ProductStartTime], 
+    [VW_Product].[UserID] AS [UserID], 
+    [VW_Product].[UserName] AS [UserName], 
+    [VW_Product].[UserFamily] AS [UserFamily], 
+    [VW_Product].[FullName] AS [FullName], 
+    [VW_Product].[ProudactActive] AS [ProudactActive], 
+    [VW_Product].[ProudactLastPourchFee] AS [ProudactLastPourchFee]
+    FROM [dbo].[VW_Product] AS [VW_Product]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_ProductPrice" EntityType="Self.VW_ProductPrice" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_ProductPrice].[ProductPriceID] AS [ProductPriceID], 
+    [VW_ProductPrice].[ProductPricePurch] AS [ProductPricePurch], 
+    [VW_ProductPrice].[ProductPriceSell] AS [ProductPriceSell], 
+    [VW_ProductPrice].[UserID] AS [UserID], 
+    [VW_ProductPrice].[ProductID] AS [ProductID], 
+    [VW_ProductPrice].[ProductPricedesc] AS [ProductPricedesc], 
+    [VW_ProductPrice].[ProductPriceDate] AS [ProductPriceDate], 
+    [VW_ProductPrice].[UserName] AS [UserName], 
+    [VW_ProductPrice].[UserFamily] AS [UserFamily], 
+    [VW_ProductPrice].[ProductName] AS [ProductName], 
+    [VW_ProductPrice].[FullName] AS [FullName]
+    FROM [dbo].[VW_ProductPrice] AS [VW_ProductPrice]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_SystemPart" EntityType="Self.VW_SystemPart" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_SystemPart].[SystemPartID] AS [SystemPartID], 
+    [VW_SystemPart].[SystemPartName] AS [SystemPartName], 
+    [VW_SystemPart].[SystemPartDetaile] AS [SystemPartDetaile], 
+    [VW_SystemPart].[SystemPartLevel] AS [SystemPartLevel], 
+    [VW_SystemPart].[childecount] AS [childecount]
+    FROM [dbo].[VW_SystemPart] AS [VW_SystemPart]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_UserLog" EntityType="Self.VW_UserLog" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_UserLog].[UserLogID] AS [UserLogID], 
+    [VW_UserLog].[ComputerName] AS [ComputerName], 
+    [VW_UserLog].[IPAddres] AS [IPAddres], 
+    [VW_UserLog].[EnterDateTime] AS [EnterDateTime], 
+    [VW_UserLog].[ExitDateTime] AS [ExitDateTime], 
+    [VW_UserLog].[UserID] AS [UserID], 
+    [VW_UserLog].[UserName] AS [UserName], 
+    [VW_UserLog].[UserFamily] AS [UserFamily], 
+    [VW_UserLog].[FullName] AS [FullName]
+    FROM [dbo].[VW_UserLog] AS [VW_UserLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_Users" EntityType="Self.VW_Users" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Users].[UserID] AS [UserID], 
+    [VW_Users].[UserFamily] AS [UserFamily], 
+    [VW_Users].[UserName] AS [UserName], 
+    [VW_Users].[UserTell] AS [UserTell], 
+    [VW_Users].[UserUserName] AS [UserUserName], 
+    [VW_Users].[UserPassword] AS [UserPassword], 
+    [VW_Users].[UserAge] AS [UserAge], 
+    [VW_Users].[UserGender] AS [UserGender], 
+    [VW_Users].[UserStartTime] AS [UserStartTime], 
+    [VW_Users].[UserActive] AS [UserActive], 
+    [VW_Users].[UserGenderFarsi] AS [UserGenderFarsi], 
+    [VW_Users].[UserActiveFarsi] AS [UserActiveFarsi], 
+    [VW_Users].[FullName] AS [FullName]
+    FROM [dbo].[VW_Users] AS [VW_Users]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Coustomer_Users" Association="Self.FK_Coustomer_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Coustomer" EntitySet="Coustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Product" Association="Self.FK_Inventory_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventory_Users" Association="Self.FK_Inventory_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InvoceItem_Product" Association="Self.FK_InvoceItem_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="InvoceItem" EntitySet="InvoceItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Coustomer" Association="Self.FK_Invoice_Coustomer">
+      <End Role="Coustomer" EntitySet="Coustomer" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Users" Association="Self.FK_Invoice_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_User" Association="Self.FK_Product_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPrice_Product" Association="Self.FK_ProductPrice_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductPrice" EntitySet="ProductPrice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPrice_User" Association="Self.FK_ProductPrice_User">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ProductPrice" EntitySet="ProductPrice" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserAccess_SystemPartID" Association="Self.fk_UserAccess_SystemPartID">
+      <End Role="SystemPart" EntitySet="SystemPart" />
+      <End Role="UserAccess" EntitySet="UserAccess" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserAccess_UserID" Association="Self.fk_UserAccess_UserID">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserAccess" EntitySet="UserAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLog_Users" Association="Self.FK_UserLog_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserLog" EntitySet="UserLog" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

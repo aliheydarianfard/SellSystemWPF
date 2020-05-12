@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sales_and_warehouse_system.Windows"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" xmlns:PersianDateControls="clr-namespace:Arash.PersianDateControls;assembly=PersianDateControls" x:Class="Sales_and_warehouse_system.Windows.Win_ShowReport"
+        mc:Ignorable="d"
+        Title="نمایش گزارشات" Height="750" Width="1200" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="493*"/>
+            <ColumnDefinition Width="205*"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <PersianDateControls:PersianDatePicker Visibility="Hidden" Name="Calnder1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Viewer:CrystalReportsViewer x:Name="CRV" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1184" Height="721" ToggleSidePanel="None" Grid.ColumnSpan="3" Margin="0,0,0,-0.2"/>
+    </Grid>
+</Window>

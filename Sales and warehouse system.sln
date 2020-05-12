@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales and warehouse system", "Sales and warehouse system\Sales and warehouse system.csproj", "{57814B55-8E41-4D48-983B-07BD776DB08C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E1F1CF20-5043-4022-AFF6-A115A8BC4B67} = {E1F1CF20-5043-4022-AFF6-A115A8BC4B67}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{E1F1CF20-5043-4022-AFF6-A115A8BC4B67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57814B55-8E41-4D48-983B-07BD776DB08C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57814B55-8E41-4D48-983B-07BD776DB08C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57814B55-8E41-4D48-983B-07BD776DB08C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57814B55-8E41-4D48-983B-07BD776DB08C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F1CF20-5043-4022-AFF6-A115A8BC4B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F1CF20-5043-4022-AFF6-A115A8BC4B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F1CF20-5043-4022-AFF6-A115A8BC4B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F1CF20-5043-4022-AFF6-A115A8BC4B67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sellModelStoreContainer" CdmEntityContainer="sellEntities">
+    <EntitySetMapping Name="Coustomers">
+      <EntityTypeMapping TypeName="sellModel.Coustomer">
+        <MappingFragment StoreEntitySet="Coustomer">
+          <ScalarProperty Name="CoustomerActive" ColumnName="CoustomerActive" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CoutomerID" ColumnName="CoutomerID" />
+          <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+          <ScalarProperty Name="CoustomerTell" ColumnName="CoustomerTell" />
+          <ScalarProperty Name="CoustoemrAddres" ColumnName="CoustoemrAddres" />
+          <ScalarProperty Name="SetDate" ColumnName="SetDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="sellModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProudactLastPourchFee" ColumnName="ProudactLastPourchFee" />
+          <ScalarProperty Name="ProudactActive" ColumnName="ProudactActive" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProdactLastPrice" ColumnName="ProdactLastPrice" />
+          <ScalarProperty Name="ProductLastSuply" ColumnName="ProductLastSuply" />
+          <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+          <ScalarProperty Name="ProductStartTime" ColumnName="ProductStartTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPrices">
+      <EntityTypeMapping TypeName="sellModel.ProductPrice">
+        <MappingFragment StoreEntitySet="ProductPrice">
+          <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+          <ScalarProperty Name="ProductPricePurch" ColumnName="ProductPricePurch" />
+          <ScalarProperty Name="ProductPriceSell" ColumnName="ProductPriceSell" />
+          <ScalarProperty Name="ProductPriceDate" ColumnName="ProductPriceDate" />
+          <ScalarProperty Name="ProductPricedesc" ColumnName="ProductPricedesc" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="sellModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="sellModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="UserTell" ColumnName="UserTell" />
+          <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+          <ScalarProperty Name="UserStartTime" ColumnName="UserStartTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_Coustomer">
+      <EntityTypeMapping TypeName="sellModel.VW_Coustomer">
+        <MappingFragment StoreEntitySet="VW_Coustomer">
+          <ScalarProperty Name="CoustomerActive" ColumnName="CoustomerActive" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="CoutomerID" ColumnName="CoutomerID" />
+          <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+          <ScalarProperty Name="CoustomerTell" ColumnName="CoustomerTell" />
+          <ScalarProperty Name="CoustoemrAddres" ColumnName="CoustoemrAddres" />
+          <ScalarProperty Name="SetDate" ColumnName="SetDate" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_Product">
+      <EntityTypeMapping TypeName="sellModel.VW_Product">
+        <MappingFragment StoreEntitySet="VW_Product">
+          <ScalarProperty Name="ProudactLastPourchFee" ColumnName="ProudactLastPourchFee" />
+          <ScalarProperty Name="ProudactActive" ColumnName="ProudactActive" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProdactLastPrice" ColumnName="ProdactLastPrice" />
+          <ScalarProperty Name="ProductLastSuply" ColumnName="ProductLastSuply" />
+          <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
+          <ScalarProperty Name="ProductStartTime" ColumnName="ProductStartTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_ProductPrice">
+      <EntityTypeMapping TypeName="sellModel.VW_ProductPrice">
+        <MappingFragment StoreEntitySet="VW_ProductPrice">
+          <ScalarProperty Name="ProductPriceID" ColumnName="ProductPriceID" />
+          <ScalarProperty Name="ProductPricePurch" ColumnName="ProductPricePurch" />
+          <ScalarProperty Name="ProductPriceSell" ColumnName="ProductPriceSell" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductPricedesc" ColumnName="ProductPricedesc" />
+          <ScalarProperty Name="ProductPriceDate" ColumnName="ProductPriceDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_Users">
+      <EntityTypeMapping TypeName="sellModel.VW_Users">
+        <MappingFragment StoreEntitySet="VW_Users">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserTell" ColumnName="UserTell" />
+          <ScalarProperty Name="UserUserName" ColumnName="UserUserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserStartTime" ColumnName="UserStartTime" />
+          <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+          <ScalarProperty Name="UserGenderFarsi" ColumnName="UserGenderFarsi" />
+          <ScalarProperty Name="UserActiveFarsi" ColumnName="UserActiveFarsi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="sellModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="sellModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="sellModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="sellModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="sellModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="sellModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="sellModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Inventories">
+      <EntityTypeMapping TypeName="sellModel.Inventory">
+        <MappingFragment StoreEntitySet="Inventory">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InventoryDesc" ColumnName="InventoryDesc" />
+          <ScalarProperty Name="InventoryDate" ColumnName="InventoryDate" />
+          <ScalarProperty Name="InventoryCount" ColumnName="InventoryCount" />
+          <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_Inventory">
+      <EntityTypeMapping TypeName="sellModel.VW_Inventory">
+        <MappingFragment StoreEntitySet="VW_Inventory">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Stutus" ColumnName="Stutus" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InventoryDesc" ColumnName="InventoryDesc" />
+          <ScalarProperty Name="InventoryDate" ColumnName="InventoryDate" />
+          <ScalarProperty Name="InventoryCount" ColumnName="InventoryCount" />
+          <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ins_product" FunctionName="sellModel.Store.sp_ins_product" />
+    <FunctionImportMapping FunctionImportName="sp_lastfe_Product" FunctionName="sellModel.Store.sp_lastfe_Product" />
+    <FunctionImportMapping FunctionImportName="sp_Update_LastSuplay" FunctionName="sellModel.Store.sp_Update_LastSuplay" />
+    <EntitySetMapping Name="UserLogs">
+      <EntityTypeMapping TypeName="sellModel.UserLog">
+        <MappingFragment StoreEntitySet="UserLog">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ExitDateTime" ColumnName="ExitDateTime" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="IPAddres" ColumnName="IPAddres" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="UserLogID" ColumnName="UserLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Update_exitttime" FunctionName="sellModel.Store.sp_Update_exitttime" />
+    <EntitySetMapping Name="VW_UserLog">
+      <EntityTypeMapping TypeName="sellModel.VW_UserLog">
+        <MappingFragment StoreEntitySet="VW_UserLog">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ExitDateTime" ColumnName="ExitDateTime" />
+          <ScalarProperty Name="EnterDateTime" ColumnName="EnterDateTime" />
+          <ScalarProperty Name="IPAddres" ColumnName="IPAddres" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="UserLogID" ColumnName="UserLogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_Update_Product" FunctionName="sellModel.Store.sp_Update_Product" />
+    <FunctionImportMapping FunctionImportName="sp_ins_product_whitoutimage" FunctionName="sellModel.Store.sp_ins_product_whitoutimage" />
+    <FunctionImportMapping FunctionImportName="sp_Update_Product_whitoutimage" FunctionName="sellModel.Store.sp_Update_Product_whitoutimage" />
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="sellModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="InvocePrice_Pourche" ColumnName="InvocePrice_Pourche" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CoustoemrId" ColumnName="CoustoemrId" />
+          <ScalarProperty Name="InvocieDesc" ColumnName="InvocieDesc" />
+          <ScalarProperty Name="InvoicePrice" ColumnName="InvoicePrice" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoceItems">
+      <EntityTypeMapping TypeName="sellModel.InvoceItem">
+        <MappingFragment StoreEntitySet="InvoceItem">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoceItemFeePurche" ColumnName="InvoceItemFeePurche" />
+          <ScalarProperty Name="InvoceItemFeeSell" ColumnName="InvoceItemFeeSell" />
+          <ScalarProperty Name="ProudactID" ColumnName="ProudactID" />
+          <ScalarProperty Name="InvoceItemCount" ColumnName="InvoceItemCount" />
+          <ScalarProperty Name="InvoceItemID" ColumnName="InvoceItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_InvoiceItem">
+      <EntityTypeMapping TypeName="sellModel.VW_InvoiceItem">
+        <MappingFragment StoreEntitySet="VW_InvoiceItem">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProudactID" ColumnName="ProudactID" />
+          <ScalarProperty Name="InvoceItemFeeSell" ColumnName="InvoceItemFeeSell" />
+          <ScalarProperty Name="InvoceItemFeePurche" ColumnName="InvoceItemFeePurche" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoceItemCount" ColumnName="InvoceItemCount" />
+          <ScalarProperty Name="InvoceItemID" ColumnName="InvoceItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_InvoiceShow">
+      <EntityTypeMapping TypeName="sellModel.VW_InvoiceShow">
+        <MappingFragment StoreEntitySet="VW_InvoiceShow">
+          <ScalarProperty Name="InvoceTypeFarsi" ColumnName="InvoceTypeFarsi" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserFamily" ColumnName="UserFamily" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="CoustoemrAddres" ColumnName="CoustoemrAddres" />
+          <ScalarProperty Name="CoustomerTell" ColumnName="CoustomerTell" />
+          <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvocePrice_Pourche" ColumnName="InvocePrice_Pourche" />
+          <ScalarProperty Name="CoustoemrId" ColumnName="CoustoemrId" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="InvocieDesc" ColumnName="InvocieDesc" />
+          <ScalarProperty Name="InvoicePrice" ColumnName="InvoicePrice" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_sell_Chart" FunctionName="sellModel.Store.sp_sell_Chart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_sell_Chart_Result">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_CoustomersellChart" FunctionName="sellModel.Store.sp_CoustomersellChart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_CoustomersellChart_Result">
+          <ScalarProperty Name="CoustomerName" ColumnName="CoustomerName" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_prouductsellpricechart" FunctionName="sellModel.Store.sp_prouductsellpricechart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_prouductsellpricechart_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_prouductsellcountchart" FunctionName="sellModel.Store.sp_prouductsellcountchart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_prouductsellcountchart_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="totalcount" ColumnName="totalcount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_selluser" FunctionName="sellModel.Store.sp_selluser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_selluser_Result">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="totalcount" ColumnName="totalcount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_porforoshtarin" FunctionName="sellModel.Store.sp_porforoshtarin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_porforoshtarin_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_porforoshtarintedad" FunctionName="sellModel.Store.sp_porforoshtarintedad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sellModel.sp_porforoshtarintedad_Result">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="totalcount" ColumnName="totalcount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SystemParts">
+      <EntityTypeMapping TypeName="sellModel.SystemPart">
+        <MappingFragment StoreEntitySet="SystemPart">
+          <ScalarProperty Name="SystemPartLevel" ColumnName="SystemPartLevel" />
+          <ScalarProperty Name="SystemPartDetaile" ColumnName="SystemPartDetaile" />
+          <ScalarProperty Name="SystemPartName" ColumnName="SystemPartName" />
+          <ScalarProperty Name="SystemPartID" ColumnName="SystemPartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SystemPart">
+      <EntityTypeMapping TypeName="sellModel.VW_SystemPart">
+        <MappingFragment StoreEntitySet="VW_SystemPart">
+          <ScalarProperty Name="childecount" ColumnName="childecount" />
+          <ScalarProperty Name="SystemPartLevel" ColumnName="SystemPartLevel" />
+          <ScalarProperty Name="SystemPartDetaile" ColumnName="SystemPartDetaile" />
+          <ScalarProperty Name="SystemPartName" ColumnName="SystemPartName" />
+          <ScalarProperty Name="SystemPartID" ColumnName="SystemPartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccesses">
+      <EntityTypeMapping TypeName="sellModel.UserAccess">
+        <MappingFragment StoreEntitySet="UserAccess">
+          <ScalarProperty Name="SystemPartID" ColumnName="SystemPartID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserAccessID" ColumnName="UserAccessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_Del_UsserAccess" FunctionName="sellModel.Store.SP_Del_UsserAccess" />
+  </EntityContainerMapping>
+</Mapping>
